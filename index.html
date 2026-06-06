@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Poch Food es la mejor Dark Kitchen especializada en auténtica comida asiática en Ambato, Ecuador. Disfruta de sushi rolls premium, gyozas de la casa y deliciosos bowls a domicilio.">
+    <title>Poch Food | Auténtica Comida Asiática en Ambato</title>
+    
+    <!-- Google Fonts: Montserrat y Unbounded para encabezados -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hojas de estilo locales -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Esferas de iluminación de fondo -->
+    <div class="glow-sphere sphere-1"></div>
+    <div class="glow-sphere sphere-2"></div>
+    <div class="glow-sphere sphere-3"></div>
+
+    <!-- Encabezado y Navegación -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo-wrapper">
+                <img src="assets/logo.png" alt="Logo de Poch Food" class="logo-img">
+                <span class="logo-text">
+                    POCH FOOD
+                    <span class="logo-subtext">Comida Asiática</span>
+                </span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link active">Inicio</a>
+                <a href="#menu" class="nav-link">Menú</a>
+                <a href="#locales" class="nav-link">Locales</a>
+                <a href="#constructor" class="nav-link">Armar Bowl</a>
+                <a href="#about" class="nav-link">Nosotros</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="cart-btn btn-pedidos" id="cartToggle" aria-label="Pedidos Online">
+                    <i class="fa-solid fa-motorcycle"></i> PEDIDOS ONLINE
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Principal (Hero Slider) -->
+        <section id="hero" class="hero-section tab-section active-tab">
+            <div class="hero-slider-container">
+                <!-- Slide 1: Sabores (Fondo Verde Texturizado) -->
+                <div class="hero-slide active" data-index="0" style="--slide-bg: #2f9e44;">
+                    <div class="slide-texture"></div>
+                    <div class="container slide-grid">
+                        <div class="slide-content">
+                            <span class="slide-badge">¡La mejor Dark Kitchen de Ambato!</span>
+                            <h1 class="slide-title">EN <span class="brand-text">POCH FOOD</span> SIEMPRE HAY NUEVOS SABORES</h1>
+                            <div class="slide-highlight-box">
+                                ¡VEN A PROBARLOS HOY!
+                            </div>
+                            <div class="slide-buttons">
+                                <a href="#menu" class="btn btn-primary">Ver el Menú</a>
+                                <a href="#constructor" class="btn btn-secondary">Diseñar mi Bowl</a>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <img src="assets/sushi.png" alt="Poch Roll Especial" class="slide-img floating-element">
+                            <img src="assets/sushi2.png" alt="Rolls Variados" class="slide-img-sub floating-element-delay">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Arma tu Bowl (Fondo Naranja Sunset) -->
+                <div class="hero-slide" data-index="1" style="--slide-bg: #e67e22;">
+                    <div class="slide-texture"></div>
+                    <div class="container slide-grid">
+                        <div class="slide-content">
+                            <span class="slide-badge">100% Personalizable</span>
+                            <h1 class="slide-title">ARMA TU PROPIO <span class="brand-text">POCH BOWL</span></h1>
+                            <div class="slide-highlight-box">
+                                ¡ELIGE TUS INGREDIENTES!
+                            </div>
+                            <div class="slide-buttons">
+                                <a href="#constructor" class="btn btn-primary">Armar Bowl</a>
+                                <a href="#menu" class="btn btn-secondary">Ver Otros Platos</a>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <img src="assets/poke.png" alt="Poch Bowl Salmón" class="slide-img floating-element">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Gyozas (Fondo Rojo Oriental) -->
+                <div class="hero-slide" data-index="2" style="--slide-bg: #c0392b;">
+                    <div class="slide-texture"></div>
+                    <div class="container slide-grid">
+                        <div class="slide-content">
+                            <span class="slide-badge">Receta Original Hecha a Mano</span>
+                            <h1 class="slide-title">GYOZAS DE LA CASA Y <span class="brand-text">BENTOS</span></h1>
+                            <div class="slide-highlight-box">
+                                ¡LA TRADICIÓN EN TU MESA!
+                            </div>
+                            <div class="slide-buttons">
+                                <a href="#menu" class="btn btn-primary">Explorar Entradas</a>
+                                <a href="#about" class="btn btn-secondary">Conócenos</a>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <img src="assets/bento.png" alt="Bento Box Especial" class="slide-img floating-element">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles del Slider -->
+                <button class="slider-arrow prev-arrow" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-arrow next-arrow" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="slider-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Constructor de Bowls (Arma tu Wok/Bowl) -->
+        <section id="constructor" class="constructor-section tab-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Diseña tu <span class="text-gradient">Poch Bowl</span></h2>
+                    <p class="section-subtitle">Elige tus ingredientes preferidos y armamos tu tazón asiático a la medida</p>
+                </div>
+                
+                <div class="constructor-grid">
+                    <!-- Formulario de ingredientes -->
+                    <div class="constructor-panel glass-panel">
+                        <!-- Paso 1: Base -->
+                        <div class="constructor-step" data-step="base">
+                            <h3 class="step-title"><span class="step-num">01</span> Escoge la Base</h3>
+                            <div class="options-grid">
+                                <label class="option-card active">
+                                    <input type="radio" name="base" value="arroz" data-price="1.50" checked>
+                                    <span class="option-name">Arroz Gohan (Sushi)</span>
+                                    <span class="option-price">+$1.50</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="base" value="fideos" data-price="1.80">
+                                    <span class="option-name">Fideos de Arroz</span>
+                                    <span class="option-price">+$1.80</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="base" value="quinua" data-price="2.00">
+                                    <span class="option-name">Quinua Orgánica</span>
+                                    <span class="option-price">+$2.00</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="base" value="ensalada" data-price="1.40">
+                                    <span class="option-name">Mix de Hojas Verdes</span>
+                                    <span class="option-price">+$1.40</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Paso 2: Proteína -->
+                        <div class="constructor-step" data-step="protein">
+                            <h3 class="step-title"><span class="step-num">02</span> Elige tu Proteína</h3>
+                            <div class="options-grid">
+                                <label class="option-card active">
+                                    <input type="radio" name="protein" value="salmon" data-price="3.50" checked>
+                                    <span class="option-name">Salmón Premium</span>
+                                    <span class="option-price">+$3.50</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="protein" value="atun" data-price="3.80">
+                                    <span class="option-name">Atún Aleta Amarilla</span>
+                                    <span class="option-price">+$3.80</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="protein" value="langostinos" data-price="3.20">
+                                    <span class="option-name">Langostinos Crujientes</span>
+                                    <span class="option-price">+$3.20</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="protein" value="tofu" data-price="1.80">
+                                    <span class="option-name">Tofu Salteado</span>
+                                    <span class="option-price">+$1.80</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Paso 3: Acompañantes / Toppings -->
+                        <div class="constructor-step" data-step="toppings">
+                            <h3 class="step-title"><span class="step-num">03</span> Agrega Toppings</h3>
+                            <div class="options-grid">
+                                <label class="option-card">
+                                    <input type="checkbox" name="toppings" value="aguacate" data-price="1.00">
+                                    <span class="option-name">Aguacate Hass</span>
+                                    <span class="option-price">+$1.00</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="checkbox" name="toppings" value="mango" data-price="1.20">
+                                    <span class="option-name">Mango Dulce</span>
+                                    <span class="option-price">+$1.20</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="checkbox" name="toppings" value="edamame" data-price="0.80">
+                                    <span class="option-name">Vainas de Edamame</span>
+                                    <span class="option-price">+$0.80</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="checkbox" name="toppings" value="pepinillo" data-price="0.60">
+                                    <span class="option-name">Pepinillo en Rodajas</span>
+                                    <span class="option-price">+$0.60</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Paso 4: Salsa -->
+                        <div class="constructor-step" data-step="sauce">
+                            <h3 class="step-title"><span class="step-num">04</span> Selecciona la Salsa</h3>
+                            <div class="options-grid">
+                                <label class="option-card active">
+                                    <input type="radio" name="sauce" value="spicy" data-price="0.50" checked>
+                                    <span class="option-name">Spicy Mayo</span>
+                                    <span class="option-price">+$0.50</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="sauce" value="unagi" data-price="0.70">
+                                    <span class="option-name">Unagi Dulce</span>
+                                    <span class="option-price">+$0.70</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="sauce" value="teriyaki" data-price="0.60">
+                                    <span class="option-name">Teriyaki de la Casa</span>
+                                    <span class="option-price">+$0.60</span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="sauce" value="soya" data-price="0.30">
+                                    <span class="option-name">Salsa de Soya Light</span>
+                                    <span class="option-price">+$0.30</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vista previa en tiempo real -->
+                    <div class="constructor-preview glass-panel">
+                        <div class="pod-display">
+                            <div class="pod-ring-glow"></div>
+                            <div class="pod-capsule">
+                                <div class="pod-layer layer-base" id="previewBase"></div>
+                                <div class="pod-layer layer-protein" id="previewProtein"></div>
+                                <div class="pod-layer layer-toppings" id="previewToppings"></div>
+                                <div class="pod-layer layer-sauce" id="previewSauce"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="pod-summary">
+                            <h4 class="pod-summary-title">Resumen de tu Bowl</h4>
+                            <ul class="pod-ingredients-list" id="summaryList">
+                                <!-- Dinámico -->
+                            </ul>
+                            <div class="pod-total-price">
+                                Total: $<span id="builderPrice">5.50</span>
+                            </div>
+                            <button class="btn btn-primary btn-block" id="addBuilderToCart">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Menú -->
+        <section id="menu" class="menu-section tab-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestro <span class="text-gradient">Menú Especial</span></h2>
+                    <p class="section-subtitle">Disfruta de la mejor sazón oriental preparada en el acto</p>
+                </div>
+                
+                <!-- Filtros de categoría -->
+                <div class="menu-filters">
+                    <button class="filter-btn active" data-category="all">Todos los Platos</button>
+                    <button class="filter-btn" data-category="rolls">Sushi & Rolls</button>
+                    <button class="filter-btn" data-category="gyozas">Gyozas & Entradas</button>
+                    <button class="filter-btn" data-category="bowls">Poch Bowls</button>
+                    <button class="filter-btn" data-category="postres">Postres y Bebidas</button>
+                </div>
+                
+                <!-- Grilla de platos -->
+                <div class="menu-grid" id="menuGrid">
+                    <!-- Dinámico por JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Locales y Reservas -->
+        <section id="locales" class="locales-section tab-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestros <span class="text-gradient">Locales y Reservas</span></h2>
+                    <p class="section-subtitle">Visítanos en nuestro local físico o reserva tu mesa para una experiencia única</p>
+                </div>
+                <div class="locales-grid">
+                    <div class="local-card glass-panel animate-on-scroll">
+                        <div class="local-badge"><i class="fa-solid fa-star"></i> Principal</div>
+                        <h3>Poch Food Ambato</h3>
+                        <p class="local-info"><i class="fa-solid fa-map-pin text-coral"></i> Pablo Arenas y José de Antepara, Ambato</p>
+                        <p class="local-info"><i class="fa-solid fa-phone text-coral"></i> 098 045 4796</p>
+                        <p class="local-info"><i class="fa-solid fa-clock text-coral"></i> Lun - Sáb: 15:00 - 22:00</p>
+                        <a href="https://wa.me/593980454796" target="_blank" class="btn btn-secondary btn-block"><i class="fa-brands fa-whatsapp"></i> Cómo llegar</a>
+                    </div>
+                    <div class="reserve-form-panel glass-panel animate-on-scroll">
+                        <h3>Reserva tu Mesa</h3>
+                        <form id="reservationForm" class="reserve-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="resName">Nombre</label>
+                                    <input type="text" id="resName" required placeholder="Tu nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="resPhone">Teléfono</label>
+                                    <input type="tel" id="resPhone" required placeholder="Tu teléfono">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="resDate">Fecha</label>
+                                    <input type="date" id="resDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="resTime">Hora</label>
+                                    <input type="time" id="resTime" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="resPeople">Personas</label>
+                                <select id="resPeople">
+                                    <option value="2">2 Personas</option>
+                                    <option value="3">3 Personas</option>
+                                    <option value="4">4 Personas</option>
+                                    <option value="5">5 o más Personas</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Confirmar Reserva</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Nosotros -->
+        <section id="about" class="about-section glass-panel tab-section">
+            <div class="container about-grid">
+                <div class="about-visual">
+                    <img src="assets/fb_info.png" alt="Información de Poch Food en Redes Sociales" class="about-img">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">La Auténtica <br><span class="text-gradient">Dark Kitchen</span></h2>
+                    <p class="about-text">
+                        Poch Food es la mejor propuesta gastronómica de comida asiática en Ambato. Nacimos con la idea de brindar preparaciones frescas, sabrosas y genuinas directamente a tu mesa.
+                    </p>
+                    <p class="about-text">
+                        Desde nuestros crujientes rolls hasta nuestras tradicionales gyozas artesanales (representadas en nuestro carismático logo), cada ingrediente se selecciona cuidadosamente para entregarte la mejor calidad.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fa-solid fa-circle-check text-coral"></i>
+                            <span>Atención de Lunes a Sábado || 15:00 - 22:00</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa-solid fa-utensils text-gold"></i>
+                            <span>Ahora también contamos con local físico</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fa-solid fa-motorcycle text-coral"></i>
+                            <span>Envíos rápidos a domicilio en todo Ambato</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal del Carrito flotante -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-sidebar glass-panel">
+            <div class="cart-header">
+                <h3><i class="fa-solid fa-basket-shopping"></i> Tu Pedido</h3>
+                <button class="close-cart" id="cartClose" aria-label="Cerrar Carrito">&times;</button>
+            </div>
+            
+            <div class="cart-items" id="cartItemsContainer">
+                <div class="cart-empty">
+                    <i class="fa-solid fa-cookie-bite empty-icon"></i>
+                    <p>Tu carrito está vacío. ¡Elige algo delicioso!</p>
+                </div>
+            </div>
+            
+            <div class="cart-footer">
+                <div class="cart-summary-row">
+                    <span>Costo de envío:</span>
+                    <span class="text-green">GRATIS</span>
+                </div>
+                <div class="cart-summary-row total-row">
+                    <span>Total:</span>
+                    $ <span id="cartTotalPrice">0.00</span>
+                </div>
+                <button class="btn btn-primary btn-block" id="checkoutBtn">
+                    Confirmar Pedido a Domicilio
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simulador de Entrega y Preparación -->
+    <div class="order-overlay" id="orderOverlay">
+        <div class="order-modal glass-panel">
+            <h3 class="order-title">Estado del <span class="text-gradient">Pedido</span></h3>
+            
+            <div class="drone-animation-container">
+                <i class="fa-solid fa-motorcycle drone-icon"></i>
+                <div class="drone-path-line"></div>
+                <i class="fa-solid fa-house-user house-icon"></i>
+            </div>
+            
+            <div class="order-status-steps">
+                <div class="status-step active" id="step1">
+                    <i class="fa-solid fa-kitchen-set"></i>
+                    <span>Cocinando</span>
+                </div>
+                <div class="status-step" id="step2">
+                    <i class="fa-solid fa-box-tissue"></i>
+                    <span>Empacando</span>
+                </div>
+                <div class="status-step" id="step3">
+                    <i class="fa-solid fa-motorcycle"></i>
+                    <span>En camino</span>
+                </div>
+                <div class="status-step" id="step4">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>¡Entregado!</span>
+                </div>
+            </div>
+            
+            <p class="order-eta" id="orderEtaText">Tiempo estimado: 25 minutos</p>
+            <button class="btn btn-secondary" id="closeOrderModal" style="display:none;">Entendido</button>
+        </div>
+    </div>
+
+    <!-- Pie de página (Footer) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo-wrapper">
+                    <img src="assets/logo.png" alt="Logo de Poch Food" class="logo-img">
+                    <span class="logo-text">
+                        POCH FOOD
+                        <span class="logo-subtext">Comida Asiática</span>
+                    </span>
+                </a>
+                <p class="footer-desc">
+                    La mejor cocina asiática y sushi de Ambato. Sabor genuino directamente a tu hogar.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/poch.food/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/593980454796" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4>Secciones</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#constructor">Armar Bowl</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4>Contacto</h4>
+                <ul class="footer-links">
+                    <li><i class="fa-solid fa-phone"></i> 098 045 4796</li>
+                    <li><i class="fa-solid fa-envelope"></i> pedidos@pochfood.com</li>
+                    <li><i class="fa-solid fa-map-pin"></i> Pablo Arenas y José de Antepara, Ambato</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Poch Food. Todos los derechos reservados.</p>
+                <p>Ambato - Ecuador</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Widgets Flotantes Laterales -->
+    <div class="floating-widgets">
+        <a href="https://wa.me/593980454796" target="_blank" class="widget-btn whatsapp-btn" aria-label="Escríbenos por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="widget-tooltip">WhatsApp</span>
+        </a>
+        <a href="#locales" class="widget-btn location-btn" aria-label="Nuestros Locales">
+            <i class="fa-solid fa-map-pin"></i>
+            <span class="widget-tooltip">Ubicación</span>
+        </a>
+        <a href="#locales" class="widget-btn book-btn" aria-label="Hacer una Reserva">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span class="widget-tooltip">Reservas</span>
+        </a>
+    </div>
+
+    <!-- Archivo interactivo en español -->
+    <script type="module" src="index.js"></script>
+</body>
+</html>
