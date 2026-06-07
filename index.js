@@ -924,10 +924,8 @@ function configurarOyentesEventos() {
             catalogLightbox.classList.remove('active');
         });
         
-        catalogLightbox.addEventListener('click', (e) => {
-            if (e.target === catalogLightbox) {
-                catalogLightbox.classList.remove('active');
-            }
+        catalogLightbox.addEventListener('click', () => {
+            catalogLightbox.classList.remove('active');
         });
     }
 

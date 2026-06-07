@@ -2721,3 +2721,120 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* ==========================================================================
+   OPTIMIZACIONES MÓVILES ADICIONALES (RESPONSIVE FIXES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Ajustes específicos para imágenes en diapositivas 1 y 4 (Banners) */
+    .hero-slide[data-index="0"] .main-banner-img {
+        max-width: 260px !important;
+        max-height: 160px !important;
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+    
+    .hero-slide[data-index="3"] .promo-banner-img {
+        max-width: 140px !important;
+        max-height: 190px !important;
+        height: auto !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+
+    .hero-slide[data-index="0"] .slide-visual,
+    .hero-slide[data-index="3"] .slide-visual {
+        height: 190px !important;
+        margin-top: 10px !important;
+    }
+    
+    /* 2. Galería de catálogo físico swipeable en celulares */
+    .physical-catalog-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 16px !important;
+        padding: 10px 20px 24px 20px !important;
+        margin-left: -24px !important;
+        margin-right: -24px !important;
+        scrollbar-width: none !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory !important;
+        grid-template-columns: none !important; /* Desactivar grid */
+    }
+    
+    .physical-catalog-grid::-webkit-scrollbar {
+        display: none !important;
+    }
+    
+    .zoomable-catalog {
+        flex: 0 0 260px !important; /* Ancho fijo en móviles para swipe */
+        scroll-snap-align: center !important;
+    }
+
+    .catalog-card-img-wrapper {
+        aspect-ratio: 1 / 1.5 !important;
+    }
+
+    /* 3. Escala y tamaño de insignias en tarjetas de menú móviles */
+    .menu-card-badge {
+        top: 8px !important;
+        right: 8px !important;
+        padding: 2px 6px !important;
+        font-size: 0.62rem !important;
+    }
+    
+    /* 4. Altura de sección y slider */
+    .hero-slider-container {
+        height: 480px !important;
+        min-height: 480px !important;
+    }
+    
+    .hero-slide {
+        height: 480px !important;
+        min-height: 480px !important;
+        padding: 10px 0 !important;
+    }
+
+    .slide-title {
+        font-size: 1.35rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .slide-highlight-box {
+        font-size: 0.82rem !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Ajuste de controles de puntos del slider */
+    .slider-dots {
+        bottom: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes extra para teléfonos pequeños */
+    .hero-slide[data-index="0"] .main-banner-img {
+        max-width: 220px !important;
+        max-height: 130px !important;
+    }
+    
+    .hero-slide[data-index="3"] .promo-banner-img {
+        max-width: 110px !important;
+        max-height: 170px !important;
+    }
+
+    .hero-slide[data-index="0"] .slide-visual,
+    .hero-slide[data-index="3"] .slide-visual {
+        height: 160px !important;
+    }
+
+    .hero-slider-container, .hero-slide {
+        height: 440px !important;
+        min-height: 440px !important;
+    }
+
+    .zoomable-catalog {
+        flex: 0 0 220px !important;
+    }
+}
