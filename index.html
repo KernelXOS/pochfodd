@@ -58,15 +58,15 @@
         <!-- Sección Principal (Hero Slider) -->
         <section id="hero" class="hero-section tab-section active-tab">
             <div class="hero-slider-container">
-                <!-- Slide 1: Sabores (Fondo Verde Texturizado) -->
-                <div class="hero-slide active" data-index="0" style="--slide-bg: #2f9e44;">
+                <!-- Slide 1: Sabores (Fondo Oscuro con Banner de Linternas) -->
+                <div class="hero-slide active" data-index="0" style="--slide-bg: #141416;">
                     <div class="slide-texture"></div>
                     <div class="container slide-grid">
                         <div class="slide-content">
                             <span class="slide-badge">¡La mejor Dark Kitchen de Ambato!</span>
                             <h1 class="slide-title">EN <span class="brand-text">POCH FOOD</span> SIEMPRE HAY NUEVOS SABORES</h1>
                             <div class="slide-highlight-box">
-                                ¡VEN A PROBARLOS HOY!
+                                ¡VERDADERA COMIDA ASIÁTICA!
                             </div>
                             <div class="slide-buttons">
                                 <a href="#menu" class="btn btn-primary">Ver el Menú</a>
@@ -74,8 +74,7 @@
                             </div>
                         </div>
                         <div class="slide-visual">
-                            <img src="/assets/sushi.png" alt="Poch Roll Especial" class="slide-img floating-element">
-                            <img src="/assets/sushi2.png" alt="Rolls Variados" class="slide-img-sub floating-element-delay">
+                            <img src="/assets/banner_lanterns.jpg" alt="Poch Food - Sabores Orientales" class="slide-img main-banner-img floating-element" style="border-radius: 15px; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 15px 35px rgba(0,0,0,0.6);">
                         </div>
                     </div>
                 </div>
@@ -122,6 +121,27 @@
                     </div>
                 </div>
 
+                <!-- Slide 4: Promoción Combo Semanal (Fondo Púrpura/Charcoal) -->
+                <div class="hero-slide" data-index="3" style="--slide-bg: #1c182a;">
+                    <div class="slide-texture"></div>
+                    <div class="container slide-grid">
+                        <div class="slide-content">
+                            <span class="slide-badge">¡Súper Combo Semanal!</span>
+                            <h1 class="slide-title">POCH DE LA <span class="brand-text">SEMANA</span></h1>
+                            <div class="slide-highlight-box">
+                                1 SUSHI ROLL + RAMEN + 5 GYOZAS POR SOLO $12
+                            </div>
+                            <div class="slide-buttons">
+                                <button class="btn btn-primary" id="btnPedirComboSemanal">Pedir Combo - $12.00</button>
+                                <a href="#menu" class="btn btn-secondary">Ver Más Platos</a>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <img src="/assets/promo_poch_semana.jpg" alt="Poch de la Semana Combo Especial" class="slide-img promo-banner-img floating-element" style="border-radius: 15px; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 15px 35px rgba(0,0,0,0.6);">
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Controles del Slider -->
                 <button class="slider-arrow prev-arrow" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="slider-arrow next-arrow" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
@@ -130,6 +150,7 @@
                     <span class="dot active" data-index="0"></span>
                     <span class="dot" data-index="1"></span>
                     <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
                 </div>
             </div>
         </section>
@@ -294,15 +315,52 @@
                 <!-- Filtros de categoría -->
                 <div class="menu-filters">
                     <button class="filter-btn active" data-category="all">Todos los Platos</button>
-                    <button class="filter-btn" data-category="rolls">Sushi & Rolls</button>
-                    <button class="filter-btn" data-category="gyozas">Gyozas & Entradas</button>
-                    <button class="filter-btn" data-category="bowls">Poch Bowls</button>
-                    <button class="filter-btn" data-category="postres">Postres y Bebidas</button>
+                    <button class="filter-btn" data-category="rolls">Rolls & Sushi</button>
+                    <button class="filter-btn" data-category="platos_fuertes">Platos Fuertes & Ramen</button>
+                    <button class="filter-btn" data-category="entradas">Entradas & Acompañantes</button>
+                    <button class="filter-btn" data-category="bebidas_postres">Bebidas & Postres</button>
                 </div>
                 
                 <!-- Grilla de platos -->
                 <div class="menu-grid" id="menuGrid">
                     <!-- Dinámico por JS -->
+                </div>
+
+                <!-- Carta Física Escaneada -->
+                <div class="physical-catalog-section">
+                    <div class="section-header" style="margin-top: 4rem;">
+                        <h3 class="section-title sub-section-title" style="font-size: 1.8rem;">Nuestra <span class="text-gradient">Carta Oficial</span></h3>
+                        <p class="section-subtitle">Haz clic en cualquier página del catálogo para verla en pantalla completa</p>
+                    </div>
+                    <div class="physical-catalog-grid">
+                        <div class="catalog-card glass-panel zoomable-catalog" data-image="/assets/menu_premium.jpg">
+                            <div class="catalog-card-img-wrapper">
+                                <img src="/assets/menu_premium.jpg" alt="Línea Premium de Rolls" class="catalog-img-preview">
+                                <div class="catalog-card-overlay">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                    <span>Ampliar Línea Premium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-card glass-panel zoomable-catalog" data-image="/assets/menu_entradas_sushi.jpg">
+                            <div class="catalog-card-img-wrapper">
+                                <img src="/assets/menu_entradas_sushi.jpg" alt="Entradas y Variedad de Sushi" class="catalog-img-preview">
+                                <div class="catalog-card-overlay">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                    <span>Ampliar Entradas y Sushi</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-card glass-panel zoomable-catalog" data-image="/assets/menu_platos_fuertes.jpg">
+                            <div class="catalog-card-img-wrapper">
+                                <img src="/assets/menu_platos_fuertes.jpg" alt="Platos Fuertes, Ramen, Bebidas y Postres" class="catalog-img-preview">
+                                <div class="catalog-card-overlay">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                    <span>Ampliar Platos Fuertes y Postres</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -537,6 +595,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox de Catálogo -->
+    <div class="lightbox-overlay" id="catalogLightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar Catálogo">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Carta Poch Food pantalla completa">
+        </div>
+    </div>
 
     <!-- Widgets Flotantes Laterales -->
     <div class="floating-widgets">

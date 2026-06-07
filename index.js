@@ -6,102 +6,345 @@
 
 // Datos del Menú (Precios en USD $)
 const CATALOGO_MENU = [
-    // --- SUSHI & ROLLS ---
+    // --- ROLLS & SUSHI (rolls) ---
     {
-        id: 'sushi-poch',
-        nombre: 'Poch Roll Especial',
+        id: 'maki-roll',
+        nombre: 'Maki Roll',
         categoria: 'rolls',
-        descripcion: 'Delicioso rollo relleno de salmón fresco, aguacate cremoso y queso crema, cubierto con sésamo tostado de la casa.',
-        precio: 6.50,
+        descripcion: 'Rollo tradicional de cangrejo, camarón y aguacate con una porción de caviar como topping.',
+        precio: 7.00,
         imagen: '/assets/sushi.png',
-        etiqueta: 'El Más Vendido'
+        etiqueta: 'Línea Premium'
     },
     {
-        id: 'tokyo-crispy',
-        nombre: 'Tokyo Crispy Roll',
+        id: 'carpi-roll',
+        nombre: 'Carpi Roll',
         categoria: 'rolls',
-        descripcion: 'Crujiente rollo tempurizado relleno de langostinos, queso crema y cebollino, bañado en salsa teriyaki de la casa.',
+        descripcion: 'Rollo tempurizado con aceite de oliva, relleno de queso crema, kanikama y caviar.',
         precio: 7.00,
         imagen: '/assets/sushi2.png',
-        etiqueta: 'Nuevo'
+        etiqueta: 'Línea Premium'
     },
     {
-        id: 'avocado-spicy',
-        nombre: 'Avocado Spicy Roll',
+        id: 'dream-roll',
+        nombre: 'Dream Roll',
         categoria: 'rolls',
-        descripcion: 'Relleno de atún picante y pepinillo, cubierto con láminas delgadas de aguacate hass y aderezo sriracha mayo.',
-        precio: 6.80,
+        descripcion: 'Rollo uramaki, relleno de queso crema, carne de camarón picante picada y aguacate. Finas láminas de aguacate como topping.',
+        precio: 7.00,
+        imagen: '/assets/sushi3.png',
+        etiqueta: 'Línea Premium'
+    },
+    {
+        id: 'kuro-roll',
+        nombre: 'Kuro Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo de sushi con queso crema, y camarón tempura troceado. Fresca ensalada de cangrejo como topping.',
+        precio: 7.00,
+        imagen: '/assets/sushi.png',
+        etiqueta: 'Línea Premium'
+    },
+    {
+        id: 'golden-roll',
+        nombre: 'Golden Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo de sushi relleno de queso crema, camarones a la plancha y ensalada de cangrejo. Una capa de caviar como topping.',
+        precio: 7.50,
+        imagen: '/assets/sushi2.png',
+        etiqueta: 'Línea Premium'
+    },
+    {
+        id: 'tokio-roll',
+        nombre: 'Tokio Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo tempurizado, kanikama, queso crema, láminas de pepino con topping de camarón tempura, cebollín y salsa de anguila.',
+        precio: 7.00,
+        imagen: '/assets/sushi3.png',
+        etiqueta: 'Tempurizado'
+    },
+    {
+        id: 'tobiko-roll',
+        nombre: 'Tobiko Roll',
+        categoria: 'rolls',
+        descripcion: 'Sashimi de pescado a la plancha, queso crema, aguacate con topping de perlas de tobiko rojo y mayonesa acevichada.',
+        precio: 7.00,
+        imagen: '/assets/sushi.png',
+        etiqueta: 'Especial'
+    },
+    {
+        id: 'dragon-roll',
+        nombre: 'Dragon Roll',
+        categoria: 'rolls',
+        descripcion: 'Camarón tempura, queso crema, láminas de pepino con topping de aguacate y salsa sriracha.',
+        precio: 7.00,
+        imagen: '/assets/sushi2.png',
+        etiqueta: 'Spicy'
+    },
+    {
+        id: 'fuji-roll',
+        nombre: 'Fuji Roll',
+        categoria: 'rolls',
+        descripcion: 'Camarón tempura, queso crema, aguacate con topping de semillas de sésamo y camarón tempura con salsa fuji y de anguila.',
+        precio: 7.00,
         imagen: '/assets/sushi3.png',
         etiqueta: 'Recomendado'
     },
-    
-    // --- GYOZAS & ENTRADAS ---
+    {
+        id: 'orenyi-roll',
+        nombre: 'Orenyi Roll',
+        categoria: 'rolls',
+        descripcion: 'Camarón tempura, aguacate, kanikama, queso crema con topping de mango y salsa fuji.',
+        precio: 7.00,
+        imagen: '/assets/sushi.png',
+        etiqueta: 'Frutal'
+    },
+    {
+        id: 'tropical-roll',
+        nombre: 'Tropical Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo relleno con kanikama, queso crema con aguacate, cubierto de láminas de maduro frito y salsa fuji.',
+        precio: 7.00,
+        imagen: '/assets/sushi2.png',
+        etiqueta: 'Exótico'
+    },
+    {
+        id: 'california-roll',
+        nombre: 'California Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo relleno con kanikama tempurizado, aguacate, queso crema y decorado con topping de sésamo negro.',
+        precio: 7.00,
+        imagen: '/assets/sushi3.png',
+        etiqueta: 'Clásico'
+    },
+    {
+        id: 'avocado-roll',
+        nombre: 'Avocado Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo relleno de camarón tempura, aguacate, queso crema, y adornado con finas láminas de aguacate y sésamo como topping.',
+        precio: 7.00,
+        imagen: '/assets/sushi.png',
+        etiqueta: 'Saludable'
+    },
+    {
+        id: 'capy-roll',
+        nombre: 'Capy Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo tempurizado estilo uramaki relleno con kanikama tempura, aguacate y salmón tempura, acompañado de nuestra salsa.',
+        precio: 7.00,
+        imagen: '/assets/sushi2.png',
+        etiqueta: 'Exclusivo'
+    },
+    {
+        id: 'samurai-roll',
+        nombre: 'Samurai Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo estilo uramaki con atún rojo, queso crema y aguacate. Adornado con topping de tobiko, tempura flakes y spicy mayo.',
+        precio: 7.50,
+        imagen: '/assets/sushi3.png',
+        etiqueta: 'Premium'
+    },
+
+    // --- PLATOS FUERTES & RAMEN (platos_fuertes) ---
+    {
+        id: 'alitas-poch',
+        nombre: 'Alitas Poch',
+        categoria: 'platos_fuertes',
+        descripcion: '5 alitas aderezadas con salsa BBQ, Cheddar o Fuji junto a una porción de papas.',
+        precio: 5.00,
+        imagen: '/assets/bento.png',
+        etiqueta: 'Para Compartir'
+    },
     {
         id: 'gyozas-casa',
-        nombre: 'Gyozas de la Casa (5 unidades)',
-        categoria: 'gyozas',
-        descripcion: 'Empanadillas japonesas artesanales rellenas de cerdo y vegetales seleccionados, cocinadas al vapor y doradas a la plancha. ¡Como la de nuestro logo!',
-        precio: 4.50,
+        nombre: 'Gyozas de la Casa',
+        categoria: 'platos_fuertes',
+        descripcion: '5 bocados de gyozas crujientes rellenas de carne premium y bañadas en salsa.',
+        precio: 4.00,
         imagen: '/assets/logo.png',
         etiqueta: 'Hecho a Mano'
     },
     {
-        id: 'edamame-sake',
-        nombre: 'Edamame Flambeado al Sake',
-        categoria: 'gyozas',
-        descripcion: 'Vainas de edamame cocidas al vapor, salteadas con sal marina gruesa, un toque de sésamo negro y flambeadas al sake.',
-        precio: 3.80,
-        imagen: '/assets/sushi.png',
-        etiqueta: 'Saludable'
-    },
-    
-    // --- POCH BOWLS ---
-    {
-        id: 'poch-bowl',
-        nombre: 'Poch Bowl Salmón',
-        categoria: 'bowls',
-        descripcion: 'Tazón asiático con base de arroz gohan, dados de salmón premium, aguacate hass, mango dulce, edamame y aderezo especial.',
-        precio: 5.50,
-        imagen: '/assets/poke.png',
-        etiqueta: 'Recomendado'
-    },
-    {
-        id: 'chicken-wok',
-        nombre: 'Teriyaki Chicken Bowl',
-        categoria: 'bowls',
-        descripcion: 'Pechuga de pollo a la plancha glaseada en salsa teriyaki, sobre arroz gohan con sésamo, cebollín y zanahoria salteada.',
-        precio: 5.00,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Clásico'
-    },
-    
-    // --- POSTRES Y BEBIDAS ---
-    {
-        id: 'taiyaki-helado',
-        nombre: 'Taiyaki con Helado',
-        categoria: 'postres',
-        descripcion: 'Postre tradicional en forma de pez, crujiente por fuera y relleno de helado cremoso de vainilla.',
+        id: 'capy-bite',
+        nombre: 'Hamburguesa Capy-Bite',
+        categoria: 'platos_fuertes',
+        descripcion: 'Hamburguesa tradicional de pulpa de cerdo tempura baña en salsa tonkatsu, queso cheddar, tomate, lechuga y salsa golf con papas spicy.',
         precio: 3.50,
-        imagen: '/assets/drink.png',
-        etiqueta: 'Especialidad'
+        imagen: '/assets/bento.png',
+        etiqueta: 'Especial'
     },
     {
-        id: 'sake-casa',
-        nombre: 'Sake Artesanal Poch',
-        categoria: 'postres',
-        descripcion: 'Delicioso sake artesanal servido frío o caliente, ideal para maridar con tus rolls preferidos (150ml).',
-        precio: 4.50,
-        imagen: '/assets/drink.png',
+        id: 'cryspy-bara',
+        nombre: 'Hamburguesa Cryspy-Bara',
+        categoria: 'platos_fuertes',
+        descripcion: 'Hamburguesa de pechuga de pollo tempura, cebollas caramelizadas, queso cheddar, salsa de anguila y salsa golf con papas spicy.',
+        precio: 3.50,
+        imagen: '/assets/bento.png',
+        etiqueta: 'Favorito'
+    },
+    {
+        id: 'nami-burguer',
+        nombre: 'Hamburguesa Nami-Burguer',
+        categoria: 'platos_fuertes',
+        descripcion: 'Hamburguesa de camarón tempura, queso cheddar, lechuga, tomate, salsa golf y ponzu con una porción de papas spicy.',
+        precio: 4.00,
+        imagen: '/assets/bento.png',
         etiqueta: 'Premium'
     },
     {
-        id: 'tea-hibiscus',
-        nombre: 'Té de Hibisco & Lychee',
-        categoria: 'postres',
-        descripcion: 'Refrescante infusión de flor de hibisco con extracto de lychee natural, endulzada ligeramente con miel orgánica.',
+        id: 'chicken-ramen',
+        nombre: 'Chicken Ramen',
+        categoria: 'platos_fuertes',
+        descripcion: 'Delicioso ramen de pollo tempura, huevo, cebollín, sésamo, maíz dulce y kanikama.',
+        precio: 3.50,
+        imagen: '/assets/bento.png',
+        etiqueta: 'Ramen'
+    },
+    {
+        id: 'beef-ramen',
+        nombre: 'Beef Ramen',
+        categoria: 'platos_fuertes',
+        descripcion: 'Delicioso ramen con carne de res a la plancha en su punto, huevo, cebollín, sésamo, maíz dulce y kanikama.',
+        precio: 3.50,
+        imagen: '/assets/bento.png',
+        etiqueta: 'Ramen'
+    },
+    {
+        id: 'tempork-ramen',
+        nombre: 'Tempork Ramen',
+        categoria: 'platos_fuertes',
+        descripcion: 'Exquisito ramen tradicional con carne de cerdo tempura, huevo, cebollín, sésamo, maíz dulce y kanikama.',
+        precio: 4.00,
+        imagen: '/assets/bento.png',
+        etiqueta: 'Ramen Especial'
+    },
+    {
+        id: 'nami-ramen',
+        nombre: 'Nami Ramen',
+        categoria: 'platos_fuertes',
+        descripcion: 'Exquisito ramen tradicional con camarones tempura, huevo, cebollín, sésamo, maíz dulce y kanikama.',
+        precio: 4.00,
+        imagen: '/assets/bento.png',
+        etiqueta: 'Ramen Especial'
+    },
+
+    // --- ENTRADAS & ACOMPAÑANTES (entradas) ---
+    {
+        id: 'corn-dog-simple',
+        nombre: 'Corn Dog Simple',
+        categoria: 'entradas',
+        descripcion: 'Banderilla de salchicha empanizada tradicional.',
+        precio: 1.00,
+        imagen: '/assets/logo.png',
+        etiqueta: 'Entrada'
+    },
+    {
+        id: 'corn-dog-mixto',
+        nombre: 'Corn Dog Mixto',
+        categoria: 'entradas',
+        descripcion: 'Banderilla de salchicha empanizada con delicioso queso fundido.',
+        precio: 1.50,
+        imagen: '/assets/logo.png',
+        etiqueta: 'Entrada'
+    },
+    {
+        id: 'k-pop-corn',
+        nombre: 'K-Pop Corn Chicken',
+        categoria: 'entradas',
+        descripcion: 'Pechuga de pollo troceada y tempura con salsa BBQ o salsa Tonkatsu.',
+        precio: 3.50,
+        imagen: '/assets/logo.png',
+        etiqueta: 'Coreano'
+    },
+
+    // --- BEBIDAS & POSTRES (bebidas_postres) ---
+    {
+        id: 'frappe-especial',
+        nombre: 'Frappés Helados',
+        categoria: 'bebidas_postres',
+        descripcion: 'Deliciosos frappés. Sabores: Choco-menta, Calabaza horneada con expresso, o Coca-Cola con helado.',
         precio: 2.50,
         imagen: '/assets/drink.png',
+        etiqueta: 'Refrescante'
+    },
+    {
+        id: 'refresco-personal',
+        nombre: 'Refresco Personal',
+        categoria: 'bebidas_postres',
+        descripcion: 'Bebida gaseosa en presentación personal.',
+        precio: 0.75,
+        imagen: '/assets/drink.png',
+        etiqueta: 'Bebida'
+    },
+    {
+        id: 'refresco-litro',
+        nombre: 'Refresco de 1 Litro',
+        categoria: 'bebidas_postres',
+        descripcion: 'Bebida gaseosa familiar de 1 litro.',
+        precio: 1.75,
+        imagen: '/assets/drink.png',
+        etiqueta: 'Familiar'
+    },
+    {
+        id: 'limonada-neon',
+        nombre: 'Limonada Neon no Mizu',
+        categoria: 'bebidas_postres',
+        descripcion: 'Refrescante limonada de limón y menta que cambia de color.',
+        precio: 2.50,
+        imagen: '/assets/drink.png',
+        etiqueta: 'Especial'
+    },
+    {
+        id: 'limonada-jengibre',
+        nombre: 'Limonada con Jengibre',
+        categoria: 'bebidas_postres',
+        descripcion: 'Limonada natural con infusión refrescante de jengibre.',
+        precio: 2.00,
+        imagen: '/assets/drink.png',
         etiqueta: 'Natural'
+    },
+    {
+        id: 'te-personal',
+        nombre: 'Té Helado Personal',
+        categoria: 'bebidas_postres',
+        descripcion: 'Refrescante té helado de la casa en presentación personal.',
+        precio: 0.75,
+        imagen: '/assets/drink.png',
+        etiqueta: 'Té Helado'
+    },
+    {
+        id: 'te-litro',
+        nombre: 'Té Helado de 1 Litro',
+        categoria: 'bebidas_postres',
+        descripcion: 'Té helado de la casa en jarra de 1 litro para compartir.',
+        precio: 1.75,
+        imagen: '/assets/drink.png',
+        etiqueta: 'Familiar'
+    },
+    {
+        id: 'dorayaki',
+        nombre: 'Dorayaki Japones',
+        categoria: 'bebidas_postres',
+        descripcion: 'Postre tradicional japonés relleno de Nutella, mermelada o dulce de leche.',
+        precio: 1.50,
+        imagen: '/assets/drink.png',
+        etiqueta: 'Postre'
+    },
+    {
+        id: 'taiyaki',
+        nombre: 'Taiyaki de la Casa',
+        categoria: 'bebidas_postres',
+        descripcion: 'Postre tradicional japonés en forma de pez relleno de Nutella, mermelada o dulce de leche.',
+        precio: 1.50,
+        imagen: '/assets/drink.png',
+        etiqueta: 'Postre'
+    },
+    {
+        id: 'capy-crepp',
+        nombre: 'Capy-Crepp Crepa',
+        categoria: 'bebidas_postres',
+        descripcion: 'Crepa rellena de fresa, banana y Nutella, decorada con crema batida y más Nutella.',
+        precio: 2.50,
+        imagen: '/assets/drink.png',
+        etiqueta: 'Recomendado'
     }
 ];
 
@@ -648,6 +891,43 @@ function configurarOyentesEventos() {
             const hora = document.getElementById('resTime').value;
             alert(`¡Reserva confirmada, ${nombre}! Te esperamos el ${fecha} a las ${hora}. ¡Muchas gracias por elegir Poch Food! 🍣`);
             reservationForm.reset();
+        });
+    }
+
+    // Botón pedir combo semanal
+    const btnComboSemanal = document.getElementById('btnPedirComboSemanal');
+    if (btnComboSemanal) {
+        btnComboSemanal.addEventListener('click', () => {
+            agregarAlCarrito(null, {
+                nombre: 'Poch de la Semana (Combo)',
+                precio: 12.00,
+                descripcion: 'Combo especial: 1 Sushi Roll (10 bocados) + 1 Ramen + 5 Gyozas (Carne Premium).'
+            });
+        });
+    }
+
+    // Lightbox para la carta física
+    const catalogLightbox = document.getElementById('catalogLightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+    
+    if (catalogLightbox && lightboxImage && lightboxClose) {
+        document.querySelectorAll('.zoomable-catalog').forEach(card => {
+            card.addEventListener('click', () => {
+                const imgSrc = card.dataset.image;
+                lightboxImage.src = imgSrc;
+                catalogLightbox.classList.add('active');
+            });
+        });
+        
+        lightboxClose.addEventListener('click', () => {
+            catalogLightbox.classList.remove('active');
+        });
+        
+        catalogLightbox.addEventListener('click', (e) => {
+            if (e.target === catalogLightbox) {
+                catalogLightbox.classList.remove('active');
+            }
         });
     }
 
