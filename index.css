@@ -2045,6 +2045,24 @@ body {
         height: 500px;
         min-height: 500px;
         padding: 20px 0;
+        overflow: visible; /* Prevent mobile clipping */
+    }
+
+    /* Enforce visibility on mobile and override keyframe fadeInUp opacity:0 Webkit bug */
+    .hero-slide .slide-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        animation: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+    
+    .hero-slide .slide-visual {
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .slide-grid {
@@ -2055,13 +2073,6 @@ body {
         height: 100%;
         gap: 10px;
         text-align: center;
-    }
-    
-    .slide-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
     }
     
     .slide-badge {
@@ -2411,6 +2422,7 @@ body {
         height: 460px;
         min-height: 460px;
         padding: 15px 0;
+        overflow: visible;
     }
     
     .slide-title {
