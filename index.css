@@ -1974,6 +1974,25 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Header fijo y centrado en móvil */
+    .header {
+        height: 70px;
+    }
+    
+    .nav-container {
+        height: 100% !important;
+        padding: 0 20px;
+    }
+    
+    .logo-img {
+        height: 44px;
+        width: 44px;
+    }
+    
+    .logo-text {
+        font-size: 1.15rem;
+    }
+
     .nav-links {
         display: none;
     }
@@ -2014,6 +2033,80 @@ body {
         border: 2px solid #ffffff !important;
         background: var(--accent-coral) !important;
         color: white !important;
+    }
+    
+    /* Slider optimizado y compacto para móviles */
+    .hero-slider-container {
+        height: 500px;
+        min-height: 500px;
+    }
+    
+    .hero-slide {
+        height: 500px;
+        min-height: 500px;
+        padding: 20px 0;
+    }
+    
+    .slide-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        text-align: center;
+        align-content: center;
+    }
+    
+    .slide-content {
+        align-items: center;
+    }
+    
+    .slide-badge {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+        margin-bottom: 10px;
+    }
+    
+    .slide-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+    
+    .slide-highlight-box {
+        font-size: 0.95rem;
+        padding: 6px 14px;
+        margin-bottom: 15px;
+    }
+    
+    .slide-buttons {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+    
+    .slide-buttons .btn {
+        flex: 1;
+        max-width: 150px;
+        padding: 10px 14px;
+        font-size: 0.8rem;
+    }
+    
+    .slide-visual {
+        margin-top: 5px;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .slide-img {
+        max-width: 140px;
+        max-height: 130px;
+        object-fit: contain;
+    }
+    
+    .slide-img-sub {
+        display: none;
     }
     
     /* Filtros desplazables horizontalmente con desvanecimiento */
@@ -2127,15 +2220,6 @@ body {
     
     .constructor-section {
         padding-bottom: 120px; /* Suficiente espacio para la barra cápsula */
-    }
-    
-    .slide-title {
-        font-size: 1.7rem;
-    }
-    
-    .slide-highlight-box {
-        font-size: 1rem;
-        padding: 8px 16px;
     }
     
     .options-grid {
@@ -2268,53 +2352,105 @@ body {
 }
 
 @media (max-width: 480px) {
+    /* Header súper compacto para móviles pequeños */
+    .header {
+        height: 64px;
+    }
+    
+    .nav-container {
+        height: 100% !important;
+        padding: 0 12px;
+    }
+    
     .logo-subtext {
         display: none;
     }
     
     .logo-text {
-        font-size: 1.15rem;
+        font-size: 1.05rem;
     }
     
     .logo-img {
-        height: 42px;
-        width: 42px;
+        height: 38px;
+        width: 38px;
     }
     
-    .nav-container {
-        height: 70px;
-        padding: 0 16px;
+    /* Botones más pequeños en header de celulares */
+    .btn-pedidos {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .btn-pedidos i {
+        font-size: 1.05rem;
+    }
+    
+    .mobile-menu-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.05rem;
     }
     
     .container {
         padding: 0 16px;
     }
     
+    /* Slider súper compacto */
+    .hero-slider-container {
+        height: 460px;
+        min-height: 460px;
+    }
+    
+    .hero-slide {
+        height: 460px;
+        min-height: 460px;
+        padding: 15px 0;
+    }
+    
     .slide-title {
-        font-size: 1.4rem;
-        letter-spacing: -1px;
+        font-size: 1.25rem;
+        letter-spacing: -0.5px;
+    }
+    
+    .slide-highlight-box {
+        font-size: 0.82rem;
+        padding: 5px 12px;
+        margin-bottom: 10px;
     }
     
     .slide-buttons {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         width: 100%;
         gap: 8px;
+        margin-bottom: 10px;
     }
     
     .slide-buttons .btn {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 0.88rem;
+        flex: 1;
+        width: auto;
+        padding: 8px 10px;
+        font-size: 0.72rem;
     }
     
     .slider-arrow {
-        width: 36px;
-        height: 36px;
-        font-size: 0.9rem;
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
     }
     
-    .prev-arrow { left: 10px; }
-    .next-arrow { right: 10px; }
+    .prev-arrow { left: 8px; }
+    .next-arrow { right: 8px; }
+    
+    .slide-visual {
+        margin-top: 5px;
+        height: 120px;
+    }
+    
+    .slide-img {
+        max-width: 120px;
+        max-height: 110px;
+    }
     
     .pod-summary {
         padding: 10px 16px;
