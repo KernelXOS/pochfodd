@@ -144,6 +144,11 @@ const prevArrow = document.querySelector('.prev-arrow');
 const nextArrow = document.querySelector('.next-arrow');
 const reservationForm = document.getElementById('reservationForm');
 
+// Elementos del Menú Lateral Móvil (Drawer)
+const mobileDrawer = document.getElementById('mobileDrawer');
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const mobileDrawerClose = document.getElementById('mobileDrawerClose');
+
 /* ==========================================================================
    1. INICIALIZACIÓN Y RENDERIZADO DEL MENÚ
    ========================================================================== */
@@ -230,6 +235,7 @@ function activarPestaña(targetId) {
     
     section.classList.add('active-tab');
     
+    // Sincronizar enlaces de navegación de escritorio
     const enlacesNav = document.querySelectorAll('.nav-link');
     enlacesNav.forEach(link => {
         link.classList.remove('active');
@@ -237,6 +243,20 @@ function activarPestaña(targetId) {
             link.classList.add('active');
         }
     });
+    
+    // Sincronizar enlaces de navegación móvil (Drawer)
+    const enlacesDrawer = document.querySelectorAll('.drawer-link');
+    enlacesDrawer.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${cleanId}`) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Cerrar el Drawer móvil si está abierto
+    if (mobileDrawer) {
+        mobileDrawer.classList.remove('active');
+    }
     
     window.scrollTo({ top: 0, behavior: 'smooth' });
     return true;
@@ -561,6 +581,23 @@ function configurarOyentesEventos() {
     // Carrito abrir/cerrar
     botonAbrirCarrito.addEventListener('click', abrirPanelCarrito);
     botonCerrarCarrito.addEventListener('click', cerrarPanelCarrito);
+    
+    // Menú Lateral Móvil (Drawer) abrir/cerrar
+    if (mobileMenuToggle && mobileDrawer && mobileDrawerClose) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileDrawer.classList.add('active');
+        });
+        
+        mobileDrawerClose.addEventListener('click', () => {
+            mobileDrawer.classList.remove('active');
+        });
+        
+        mobileDrawer.addEventListener('click', (e) => {
+            if (e.target === mobileDrawer) {
+                mobileDrawer.classList.remove('active');
+            }
+        });
+    }
     
     overlayCarrito.addEventListener('click', (e) => {
         if (e.target === overlayCarrito) cerrarPanelCarrito();

@@ -44,8 +44,11 @@
             
             <div class="nav-actions">
                 <button class="cart-btn btn-pedidos" id="cartToggle" aria-label="Pedidos Online">
-                    <i class="fa-solid fa-motorcycle"></i> PEDIDOS ONLINE
+                    <i class="fa-solid fa-motorcycle"></i> <span class="btn-text">PEDIDOS ONLINE</span>
                     <span class="cart-badge" id="cartCount">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Abrir Menú">
+                    <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
@@ -419,6 +422,36 @@
                 <button class="btn btn-primary btn-block" id="checkoutBtn">
                     Confirmar Pedido a Domicilio
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menú Lateral Móvil (Drawer) -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-content glass-panel">
+            <div class="drawer-header">
+                <a href="#" class="logo-wrapper">
+                    <img src="assets/logo.png" alt="Logo de Poch Food" class="logo-img">
+                    <span class="logo-text">
+                        POCH FOOD
+                        <span class="logo-subtext">Comida Asiática</span>
+                    </span>
+                </a>
+                <button class="close-drawer" id="mobileDrawerClose" aria-label="Cerrar Menú">&times;</button>
+            </div>
+            
+            <nav class="drawer-links">
+                <a href="#hero" class="drawer-link active">Inicio</a>
+                <a href="#menu" class="drawer-link">Menú</a>
+                <a href="#locales" class="drawer-link">Locales</a>
+                <a href="#constructor" class="drawer-link">Armar Bowl</a>
+                <a href="#about" class="drawer-link">Nosotros</a>
+            </nav>
+            
+            <div class="drawer-footer">
+                <p><i class="fa-solid fa-phone"></i> 098 045 4796</p>
+                <p><i class="fa-solid fa-envelope"></i> pedidos@pochfood.com</p>
+                <p><i class="fa-solid fa-clock"></i> Lun - Sáb: 15:00 - 22:00</p>
             </div>
         </div>
     </div>

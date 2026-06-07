@@ -1719,6 +1719,140 @@ body {
 }
 
 /* RESPONSIVIDAD */
+
+/* Botón de Menú Hamburguesa en Header */
+.mobile-menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e2dcd5;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.mobile-menu-btn:hover {
+    background: var(--accent-cream);
+    border-color: var(--accent-coral);
+    color: var(--accent-coral);
+    box-shadow: 0 4px 12px rgba(213, 99, 85, 0.15);
+}
+
+/* Menú Lateral Móvil (Drawer) */
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(45, 41, 38, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: 1100;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+}
+
+.mobile-drawer.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-drawer .drawer-content {
+    position: absolute;
+    left: -320px;
+    top: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    border-radius: 0;
+    border-right: 1px solid rgba(213, 99, 85, 0.12);
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.03);
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-drawer.active .drawer-content {
+    left: 0;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ebdcd5;
+    padding-bottom: 16px;
+}
+
+.close-drawer {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: var(--transition-smooth);
+}
+
+.close-drawer:hover {
+    color: var(--accent-coral);
+}
+
+.drawer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.drawer-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 12px 20px;
+    border: 1px solid var(--border-light);
+    border-radius: 50px;
+    transition: var(--transition-smooth);
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+}
+
+.drawer-link:hover {
+    background: var(--accent-cream);
+    border-color: var(--accent-coral);
+    color: var(--accent-coral);
+}
+
+.drawer-link.active {
+    background: var(--accent-coral);
+    border-color: var(--accent-coral);
+    color: #ffffff;
+    box-shadow: 0 4px 12px var(--accent-coral-glow);
+}
+
+.drawer-footer {
+    border-top: 1px solid #ebdcd5;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* Media Queries */
 @media (max-width: 1024px) {
     .hero-slider-container {
         height: auto;
@@ -1782,6 +1916,139 @@ body {
         display: none;
     }
     
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .nav-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    /* Botón Pedidos circular en móviles */
+    .btn-pedidos .btn-text {
+        display: none;
+    }
+    
+    .btn-pedidos {
+        padding: 0 !important;
+        width: 48px;
+        height: 48px;
+        justify-content: center;
+        border-radius: 50% !important;
+    }
+    
+    .btn-pedidos i {
+        margin: 0;
+        font-size: 1.15rem;
+    }
+    
+    .btn-pedidos .cart-badge {
+        position: absolute !important;
+        top: -4px;
+        right: -4px;
+        margin-left: 0 !important;
+        border: 2px solid #ffffff !important;
+        background: var(--accent-coral) !important;
+        color: white !important;
+    }
+    
+    /* Filtros desplazables horizontalmente */
+    .menu-filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 4px 16px 12px 16px;
+        margin-left: -24px;
+        margin-right: -24px;
+        gap: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .menu-filters::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .filter-btn {
+        flex-shrink: 0;
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+    
+    /* Constructor Adaptable en Móviles */
+    .constructor-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .constructor-preview {
+        order: -1;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    
+    .pod-display {
+        margin: 0 auto;
+        height: 190px;
+        width: 100%;
+        max-width: 220px;
+    }
+    
+    .pod-capsule {
+        width: 140px;
+        height: 105px;
+        margin-bottom: 15px;
+    }
+    
+    .pod-ring-glow {
+        width: 150px;
+        bottom: 15px;
+    }
+    
+    .pod-summary {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid var(--border-light);
+        padding: 14px 24px;
+        z-index: 998;
+        box-shadow: 0 -5px 20px rgba(45, 41, 38, 0.08);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+    
+    .pod-ingredients-list,
+    .pod-summary-title {
+        display: none;
+    }
+    
+    .pod-total-price {
+        margin-bottom: 0;
+        font-size: 1.15rem;
+    }
+    
+    .pod-summary .btn-block {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        border-radius: var(--radius-md);
+    }
+    
+    .constructor-section {
+        padding-bottom: 100px; /* Espacio para que la barra sticky no tape el contenido */
+    }
+    
     .slide-title {
         font-size: 1.7rem;
     }
@@ -1792,7 +2059,35 @@ body {
     }
     
     .options-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 10px;
+    }
+    
+    .option-card {
+        padding: 12px;
+    }
+    
+    .option-name {
+        font-size: 0.85rem;
+    }
+    
+    .local-card, .reserve-form-panel {
+        padding: 24px;
+    }
+    
+    .about-section {
+        padding: 24px;
+        margin: 40px 0;
+    }
+    
+    .cart-sidebar {
+        max-width: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .order-modal {
+        padding: 24px;
     }
     
     .footer-grid {
@@ -1810,11 +2105,100 @@ body {
     }
     
     .floating-widgets {
-        right: 10px;
+        top: auto;
+        bottom: 95px; /* Por encima de la barra flotante del constructor */
+        transform: none;
+        right: 16px;
+        gap: 8px;
+    }
+    
+    .widget-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
     }
     
     .widget-tooltip {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-subtext {
+        display: none;
+    }
+    
+    .logo-text {
+        font-size: 1.15rem;
+    }
+    
+    .logo-img {
+        height: 42px;
+        width: 42px;
+    }
+    
+    .nav-container {
+        height: 70px;
+        padding: 0 16px;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    .slide-title {
+        font-size: 1.4rem;
+        letter-spacing: -1px;
+    }
+    
+    .slide-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+    
+    .slide-buttons .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.88rem;
+    }
+    
+    .slider-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+    
+    .prev-arrow { left: 10px; }
+    .next-arrow { right: 10px; }
+    
+    .pod-summary {
+        padding: 10px 16px;
+    }
+    
+    .pod-total-price {
+        font-size: 1rem;
+    }
+    
+    .status-step i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .drone-animation-container {
+        height: 60px;
+        margin: 30px 0 40px 0;
+    }
+    
+    .drone-icon {
+        font-size: 1.5rem;
+        bottom: -8px;
+    }
+    
+    .house-icon {
+        font-size: 1.4rem;
+        bottom: -6px;
     }
 }
 
