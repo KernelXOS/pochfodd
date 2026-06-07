@@ -13,7 +13,7 @@ const CATALOGO_MENU = [
         categoria: 'rolls',
         descripcion: 'Delicioso rollo relleno de salmón fresco, aguacate cremoso y queso crema, cubierto con sésamo tostado de la casa.',
         precio: 6.50,
-        imagen: 'assets/sushi.png',
+        imagen: '/assets/sushi.png',
         etiqueta: 'El Más Vendido'
     },
     {
@@ -22,7 +22,7 @@ const CATALOGO_MENU = [
         categoria: 'rolls',
         descripcion: 'Crujiente rollo tempurizado relleno de langostinos, queso crema y cebollino, bañado en salsa teriyaki de la casa.',
         precio: 7.00,
-        imagen: 'assets/sushi2.png',
+        imagen: '/assets/sushi2.png',
         etiqueta: 'Nuevo'
     },
     {
@@ -31,7 +31,7 @@ const CATALOGO_MENU = [
         categoria: 'rolls',
         descripcion: 'Relleno de atún picante y pepinillo, cubierto con láminas delgadas de aguacate hass y aderezo sriracha mayo.',
         precio: 6.80,
-        imagen: 'assets/sushi3.png',
+        imagen: '/assets/sushi3.png',
         etiqueta: 'Recomendado'
     },
     
@@ -42,7 +42,7 @@ const CATALOGO_MENU = [
         categoria: 'gyozas',
         descripcion: 'Empanadillas japonesas artesanales rellenas de cerdo y vegetales seleccionados, cocinadas al vapor y doradas a la plancha. ¡Como la de nuestro logo!',
         precio: 4.50,
-        imagen: 'assets/logo.png',
+        imagen: '/assets/logo.png',
         etiqueta: 'Hecho a Mano'
     },
     {
@@ -51,7 +51,7 @@ const CATALOGO_MENU = [
         categoria: 'gyozas',
         descripcion: 'Vainas de edamame cocidas al vapor, salteadas con sal marina gruesa, un toque de sésamo negro y flambeadas al sake.',
         precio: 3.80,
-        imagen: 'assets/sushi.png',
+        imagen: '/assets/sushi.png',
         etiqueta: 'Saludable'
     },
     
@@ -62,7 +62,7 @@ const CATALOGO_MENU = [
         categoria: 'bowls',
         descripcion: 'Tazón asiático con base de arroz gohan, dados de salmón premium, aguacate hass, mango dulce, edamame y aderezo especial.',
         precio: 5.50,
-        imagen: 'assets/poke.png',
+        imagen: '/assets/poke.png',
         etiqueta: 'Recomendado'
     },
     {
@@ -71,7 +71,7 @@ const CATALOGO_MENU = [
         categoria: 'bowls',
         descripcion: 'Pechuga de pollo a la plancha glaseada en salsa teriyaki, sobre arroz gohan con sésamo, cebollín y zanahoria salteada.',
         precio: 5.00,
-        imagen: 'assets/bento.png',
+        imagen: '/assets/bento.png',
         etiqueta: 'Clásico'
     },
     
@@ -82,7 +82,7 @@ const CATALOGO_MENU = [
         categoria: 'postres',
         descripcion: 'Postre tradicional en forma de pez, crujiente por fuera y relleno de helado cremoso de vainilla.',
         precio: 3.50,
-        imagen: 'assets/drink.png',
+        imagen: '/assets/drink.png',
         etiqueta: 'Especialidad'
     },
     {
@@ -91,7 +91,7 @@ const CATALOGO_MENU = [
         categoria: 'postres',
         descripcion: 'Delicioso sake artesanal servido frío o caliente, ideal para maridar con tus rolls preferidos (150ml).',
         precio: 4.50,
-        imagen: 'assets/drink.png',
+        imagen: '/assets/drink.png',
         etiqueta: 'Premium'
     },
     {
@@ -100,7 +100,7 @@ const CATALOGO_MENU = [
         categoria: 'postres',
         descripcion: 'Refrescante infusión de flor de hibisco con extracto de lychee natural, endulzada ligeramente con miel orgánica.',
         precio: 2.50,
-        imagen: 'assets/drink.png',
+        imagen: '/assets/drink.png',
         etiqueta: 'Natural'
     }
 ];
@@ -311,7 +311,7 @@ function agregarAlCarrito(idProducto, detallesPersonalizados = null) {
             id: 'custom-' + Date.now(),
             nombre: detallesPersonalizados.nombre,
             precio: detallesPersonalizados.precio,
-            imagen: 'assets/poke.png',
+            imagen: '/assets/poke.png',
             descripcion: detallesPersonalizados.descripcion,
             cantidad: 1
         });

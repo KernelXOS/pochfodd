@@ -2048,14 +2048,20 @@ body {
     }
     
     .slide-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 10px;
         text-align: center;
-        align-content: center;
     }
     
     .slide-content {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     
     .slide-badge {
