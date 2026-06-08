@@ -637,6 +637,285 @@ body {
     box-shadow: 0 0 8px rgba(255,255,255,0.5);
 }
 
+/* ==========================================================================
+   HERO FEATURES STRIP — Tarjetas de info rápida
+   ========================================================================== */
+.hero-features {
+    background: #ffffff;
+    padding: 48px 0;
+    border-bottom: 1px solid rgba(213, 99, 85, 0.08);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--bg-main);
+    border: 1px solid rgba(213, 99, 85, 0.1);
+    border-radius: var(--radius-md);
+    transition: var(--transition-smooth);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(213, 99, 85, 0.1);
+    border-color: var(--accent-coral);
+}
+
+.feature-icon-wrap {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent-coral) 0%, #be4e40 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px var(--accent-coral-glow);
+}
+
+.feature-info h4 {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.feature-info p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   HERO MAP SECTION — Mapa de Ubicación
+   ========================================================================== */
+.hero-map-section {
+    padding: 80px 0;
+    background: var(--bg-main);
+}
+
+.map-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.map-info-panel {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid rgba(213, 99, 85, 0.12);
+    box-shadow: 0 15px 40px rgba(45, 41, 38, 0.04);
+}
+
+.map-info-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-cream);
+    color: var(--accent-coral);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.map-info-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.map-info-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.map-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.map-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.map-detail-item > i {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 10px;
+    background: var(--accent-cream);
+    color: var(--accent-coral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.map-detail-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.map-detail-item strong {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.map-detail-item span {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.map-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.map-actions .btn {
+    flex: 1;
+    min-width: 160px;
+    font-size: 0.88rem;
+    padding: 12px 20px;
+}
+
+/* Contenedor del iframe del mapa */
+.map-embed-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 450px;
+    box-shadow: 0 15px 40px rgba(45, 41, 38, 0.08);
+    border: 1px solid rgba(213, 99, 85, 0.1);
+    position: relative;
+    background: #f0ece8;
+}
+
+.map-embed-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Responsive: Features + Map */
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .map-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .map-embed-wrapper {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-features {
+        padding: 30px 0;
+    }
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .feature-card {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+    .feature-icon-wrap {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+    .feature-info h4 {
+        font-size: 0.78rem;
+    }
+    .feature-info p {
+        font-size: 0.72rem;
+    }
+    .hero-map-section {
+        padding: 50px 0;
+    }
+    .map-info-panel {
+        padding: 28px;
+    }
+    .map-info-title {
+        font-size: 1.4rem;
+    }
+    .map-embed-wrapper {
+        min-height: 280px;
+    }
+    .map-actions {
+        flex-direction: column;
+    }
+    .map-actions .btn {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        gap: 8px;
+    }
+    .feature-card {
+        padding: 12px;
+        gap: 10px;
+    }
+    .feature-icon-wrap {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+    }
+    .feature-info h4 {
+        font-size: 0.72rem;
+    }
+    .feature-info p {
+        font-size: 0.68rem;
+    }
+    .map-embed-wrapper {
+        min-height: 240px;
+    }
+}
+
 /* ENCABEZADOS DE SECCIÓN */
 .section-header {
     text-align: center;
@@ -1055,6 +1334,52 @@ body {
 .btn-icon:hover {
     transform: scale(1.1) rotate(90deg);
     box-shadow: 0 5px 12px var(--accent-coral-glow);
+}
+
+/* Botón "Añadido" - feedback visual al agregar al carrito */
+.btn-icon.added {
+    background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-dark) 100%) !important;
+    box-shadow: 0 3px 12px var(--accent-green-glow) !important;
+    transform: scale(1.15) rotate(0deg) !important;
+}
+
+/* Animación de entrada escalonada para tarjetas de menú */
+.menu-card {
+    animation: fadeInCard 0.4s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInCard {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estado vacío del menú */
+.menu-empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+}
+
+.menu-empty-state i {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    color: #ebdcd5;
+}
+
+.menu-empty-state p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Indicador de contador de productos */
+#totalProductCount {
+    color: var(--accent-coral);
+    font-weight: 800;
 }
 
 /* SECCIÓN SOBRE NOSOTROS */
