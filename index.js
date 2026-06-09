@@ -6,12 +6,9 @@
  */
 
 // =========================================================================
-// CATÁLOGO DE PRODUCTOS (Precios en USD $)
-// =========================================================================
 const CATALOGO_MENU = [
-
     // =====================================================================
-    // ENTRADAS & ACOMPAÑANTES
+    // ENTRADAS
     // =====================================================================
     {
         id: 'corn-dog-simple',
@@ -19,30 +16,30 @@ const CATALOGO_MENU = [
         categoria: 'entradas',
         descripcion: 'Banderilla de salchicha empanizada, crujiente y deliciosa.',
         precio: 1.00,
-        imagen: '/assets/bento.png',
+        imagen: '/assets/corndog.png',
         etiqueta: 'Entrada'
     },
     {
         id: 'corn-dog-mixto',
         nombre: 'Corn Dog Mixto',
         categoria: 'entradas',
-        descripcion: 'Banderilla de salchicha empanizada con queso fundido por dentro.',
+        descripcion: 'Banderilla de salchicha empanizada y queso fundido por dentro.',
         precio: 1.50,
-        imagen: '/assets/bento.png',
+        imagen: '/assets/corndog.png',
         etiqueta: 'Entrada'
     },
     {
         id: 'k-pop-corn',
-        nombre: 'K-Pop Corn',
+        nombre: 'K-pop corn',
         categoria: 'entradas',
         descripcion: 'Pechuga de pollo troceada y tempura con salsa BBQ o Tonkatsu.',
         precio: 3.50,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Coreano'
+        imagen: '/assets/kpop_corn.png',
+        etiqueta: 'Pollo Frito'
     },
 
     // =====================================================================
-    // MENÚ DE SUSHI — ROLLS
+    // MENÚ DE SUSHI
     // =====================================================================
     {
         id: 'tokio-roll',
@@ -51,16 +48,7 @@ const CATALOGO_MENU = [
         descripcion: 'Rollo tempurizado, kanikama, queso crema, láminas de pepino con topping de camarón tempura, cebollín y salsa de anguila.',
         precio: 7.00,
         imagen: '/assets/sushi.png',
-        etiqueta: 'Tempurizado'
-    },
-    {
-        id: 'tropical-roll',
-        nombre: 'Tropical Roll',
-        categoria: 'rolls',
-        descripcion: 'Rollo relleno con kanikama, queso crema con aguacate, cubierto de láminas de maduro frito y salsa fuji.',
-        precio: 7.00,
-        imagen: '/assets/sushi2.png',
-        etiqueta: 'Exótico'
+        etiqueta: 'Popular'
     },
     {
         id: 'tobiko-roll',
@@ -69,16 +57,7 @@ const CATALOGO_MENU = [
         descripcion: 'Sashimi de pescado a la plancha, queso crema, aguacate con topping de perlas de tobiko rojo y mayonesa acevichada.',
         precio: 7.00,
         imagen: '/assets/sushi3.png',
-        etiqueta: 'Especial'
-    },
-    {
-        id: 'california-roll',
-        nombre: 'California Roll',
-        categoria: 'rolls',
-        descripcion: 'Rollo relleno con kanikama tempurizado, aguacate, queso crema y decorado con topping de sésamo negro.',
-        precio: 7.00,
-        imagen: '/assets/sushi.png',
-        etiqueta: 'Clásico'
+        etiqueta: 'Acevichado'
     },
     {
         id: 'dragon-roll',
@@ -90,15 +69,6 @@ const CATALOGO_MENU = [
         etiqueta: 'Spicy'
     },
     {
-        id: 'avocado-roll',
-        nombre: 'Avocado Roll',
-        categoria: 'rolls',
-        descripcion: 'Rollo relleno de camarón tempura, aguacate, queso crema, y adornado con finas láminas de aguacate y sésamo como topping.',
-        precio: 7.00,
-        imagen: '/assets/sushi3.png',
-        etiqueta: 'Saludable'
-    },
-    {
         id: 'fuji-roll',
         nombre: 'Fuji Roll',
         categoria: 'rolls',
@@ -108,15 +78,6 @@ const CATALOGO_MENU = [
         etiqueta: 'Recomendado'
     },
     {
-        id: 'capy-roll',
-        nombre: 'Capy Roll',
-        categoria: 'rolls',
-        descripcion: 'Rollo tempurizado estilo uramaki relleno con kanikama tempura, aguacate y salmón tempura, acompañado de nuestra salsa.',
-        precio: 7.00,
-        imagen: '/assets/sushi_blue_tempura.jpg',
-        etiqueta: 'Exclusivo'
-    },
-    {
         id: 'orenyi-roll',
         nombre: 'Orenyi Roll',
         categoria: 'rolls',
@@ -124,6 +85,42 @@ const CATALOGO_MENU = [
         precio: 7.00,
         imagen: '/assets/sushi3.png',
         etiqueta: 'Frutal'
+    },
+    {
+        id: 'tropical-roll',
+        nombre: 'Tropical Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo relleno con kanikama, queso crema con aguacate, cubierto de láminas de maduro frito y salsa fuji.',
+        precio: 7.00,
+        imagen: '/assets/sushi2.png',
+        etiqueta: 'Plátano Maduro'
+    },
+    {
+        id: 'california-roll',
+        nombre: 'California Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo relleno con kanikama tempurizado, aguacate, queso crema y decorado con topping de sésamo negro.',
+        precio: 7.00,
+        imagen: '/assets/sushi.png',
+        etiqueta: 'Clásico'
+    },
+    {
+        id: 'avocado-roll',
+        nombre: 'Avocado Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo relleno de camarón tempura, aguacate, queso crema, y adornado con finas láminas de aguacate y sésamo como topping.',
+        precio: 7.00,
+        imagen: '/assets/sushi3.png',
+        etiqueta: 'Saludable'
+    },
+    {
+        id: 'capy-roll',
+        nombre: 'Capy Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo tempurizado estilo uramaki relleno con kanikama tempura, aguacate y salmón tempura, acompañado de nuestra salsa.',
+        precio: 7.00,
+        imagen: '/assets/sushi_blue_tempura.jpg',
+        etiqueta: 'Uramaki'
     },
     {
         id: 'samurai-roll',
@@ -136,10 +133,59 @@ const CATALOGO_MENU = [
     },
 
     // =====================================================================
+    // LÍNEA PREMIUM (SUSHI)
+    // =====================================================================
+    {
+        id: 'maki-roll',
+        nombre: 'Maki Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo tradicional de cangrejo, camarón y aguacate con una porción de caviar como topping.',
+        precio: 7.00,
+        imagen: '/assets/sushi.png',
+        etiqueta: 'Premium'
+    },
+    {
+        id: 'carpi-roll',
+        nombre: 'Carpi Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo tempurizado con aceite de oliva, relleno de queso crema, kanikama y caviar.',
+        precio: 7.00,
+        imagen: '/assets/sushi_especial.jpg',
+        etiqueta: 'Premium'
+    },
+    {
+        id: 'dream-roll',
+        nombre: 'Dream Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo uramaki, relleno de queso crema, carne de camarón picante picada y aguacate. Finas láminas de aguacate como topping.',
+        precio: 7.00,
+        imagen: '/assets/sushi2.png',
+        etiqueta: 'Premium'
+    },
+    {
+        id: 'kuro-roll',
+        nombre: 'Kuro Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo de sushi con queso crema, y camarón tempura troceado. Fresca ensalada de cangrejo como topping.',
+        precio: 7.00,
+        imagen: '/assets/sushi3.png',
+        etiqueta: 'Premium'
+    },
+    {
+        id: 'golden-roll',
+        nombre: 'Golden Roll',
+        categoria: 'rolls',
+        descripcion: 'Rollo de sushi relleno de queso crema, camarones a la plancha y ensalada de cangrejo. Una capa de caviar como topping.',
+        precio: 7.50,
+        imagen: '/assets/sushi_blue_tempura.jpg',
+        etiqueta: 'Premium'
+    },
+
+    // =====================================================================
     // PLATOS FUERTES
     // =====================================================================
     {
-        id: 'alitas-poch',
+        id: 'alitas',
         nombre: 'Alitas',
         categoria: 'platos_fuertes',
         descripcion: '5 alitas aderezadas con salsa BBQ, Cheddar o Fuji junto a una porción de papas.',
@@ -148,26 +194,26 @@ const CATALOGO_MENU = [
         etiqueta: 'Para Compartir'
     },
     {
-        id: 'gyozas-casa',
+        id: 'gyozas',
         nombre: 'Gyozas',
         categoria: 'platos_fuertes',
         descripcion: '5 bocados de gyozas crujientes rellenas de carne premium y bañadas en salsa.',
         precio: 4.00,
         imagen: '/assets/logo.png',
-        etiqueta: 'Hecho a Mano'
+        etiqueta: 'Artesanal'
     },
     {
         id: 'capy-bite',
-        nombre: 'Capy-Bite',
+        nombre: 'Capy-bite',
         categoria: 'platos_fuertes',
-        descripcion: 'Hamburguesa tradicional de pulpa de cerdo tempura bañada en salsa tonkatsu, queso cheddar, tomate, lechuga fresca y salsa golf, junto a una porción de papas spicy.',
+        descripcion: 'Hamburguesa tradicional de pulpa de cerdo tempura bañada en salsa tonkatsu, queso cheddar, tomate, lechuga fresca y salsa golf, junto a una porción papas spicy.',
         precio: 3.50,
         imagen: '/assets/bento.png',
         etiqueta: 'Hamburguesa'
     },
     {
         id: 'cryspy-bara',
-        nombre: 'Cryspy-Bara',
+        nombre: 'Cryspy-bara',
         categoria: 'platos_fuertes',
         descripcion: 'Hamburguesa de pechuga de pollo tempura, cebollas caramelizadas, queso cheddar, salsa de anguila y salsa golf, junto a una porción de papas spicy.',
         precio: 3.50,
@@ -176,12 +222,12 @@ const CATALOGO_MENU = [
     },
     {
         id: 'nami-burguer',
-        nombre: 'Nami-Burguer',
+        nombre: 'Nami-burguer',
         categoria: 'platos_fuertes',
         descripcion: 'Hamburguesa al estilo nipón, carne de camarón tempura, queso cheddar, lechuga, tomate, bañada en salsa golf y ponzu. Acompañada de una porción de papas spicy.',
         precio: 4.00,
         imagen: '/assets/bento.png',
-        etiqueta: 'Premium'
+        etiqueta: 'Hamburguesa'
     },
 
     // =====================================================================
@@ -193,16 +239,7 @@ const CATALOGO_MENU = [
         categoria: 'ramen',
         descripcion: 'Delicioso ramen de pollo tempura, huevo, cebollín, sésamo, maíz dulce y kanikama.',
         precio: 3.50,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Ramen'
-    },
-    {
-        id: 'beef-ramen',
-        nombre: 'Beef Ramen',
-        categoria: 'ramen',
-        descripcion: 'Delicioso ramen, carne de res a la plancha en su punto, huevo, cebollín, sésamo, maíz dulce y kanikama.',
-        precio: 3.50,
-        imagen: '/assets/bento.png',
+        imagen: '/assets/ramen.png',
         etiqueta: 'Ramen'
     },
     {
@@ -211,8 +248,17 @@ const CATALOGO_MENU = [
         categoria: 'ramen',
         descripcion: 'Exquisito ramen tradicional con carne de cerdo tempura, huevo, cebollín, sésamo, maíz dulce y kanikama.',
         precio: 4.00,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Ramen Especial'
+        imagen: '/assets/ramen.png',
+        etiqueta: 'Ramen'
+    },
+    {
+        id: 'beef-ramen',
+        nombre: 'Beef Ramen',
+        categoria: 'ramen',
+        descripcion: 'Delicioso ramen, carne de res a la plancha en su punto, huevo, cebollín, sésamo, maíz dulce y kanikama.',
+        precio: 3.50,
+        imagen: '/assets/ramen.png',
+        etiqueta: 'Ramen'
     },
     {
         id: 'nami-ramen',
@@ -220,21 +266,21 @@ const CATALOGO_MENU = [
         categoria: 'ramen',
         descripcion: 'Exquisito ramen tradicional con camarones tempura, huevo, cebollín, sésamo, maíz dulce y kanikama.',
         precio: 4.00,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Ramen Especial'
+        imagen: '/assets/ramen.png',
+        etiqueta: 'Ramen'
     },
 
     // =====================================================================
     // BEBIDAS
     // =====================================================================
     {
-        id: 'frappe-especial',
+        id: 'frappes',
         nombre: 'Frappés',
         categoria: 'bebidas',
-        descripcion: 'Sabores: Choco-menta, Calabaza horneada con expresso, Coca-Cola con helado.',
+        descripcion: 'Sabores: Choco-menta; Calabaza horneada con expresso; Coca-Cola con helado.',
         precio: 2.50,
         imagen: '/assets/drink.png',
-        etiqueta: 'Refrescante'
+        etiqueta: 'Bebida'
     },
     {
         id: 'refresco-personal',
@@ -256,7 +302,7 @@ const CATALOGO_MENU = [
     },
     {
         id: 'limonada-neon',
-        nombre: 'Neon no Mizu',
+        nombre: 'Limonada Neon no Mizu',
         categoria: 'bebidas',
         descripcion: 'Limonada de limón + menta que cambia de color. ¡Experiencia visual única!',
         precio: 2.50,
@@ -265,7 +311,7 @@ const CATALOGO_MENU = [
     },
     {
         id: 'limonada-jengibre',
-        nombre: 'Limón con Jengibre',
+        nombre: 'Limonada Limón con Jengibre',
         categoria: 'bebidas',
         descripcion: 'Limonada natural con infusión refrescante de jengibre.',
         precio: 2.00,
@@ -276,7 +322,7 @@ const CATALOGO_MENU = [
         id: 'te-personal',
         nombre: 'Té Personal',
         categoria: 'bebidas',
-        descripcion: 'Refrescante té helado de la casa en presentación personal.',
+        descripcion: 'Té helado de la casa en presentación personal.',
         precio: 0.75,
         imagen: '/assets/drink.png',
         etiqueta: 'Té'
@@ -285,7 +331,7 @@ const CATALOGO_MENU = [
         id: 'te-litro',
         nombre: 'Té de 1 Litro',
         categoria: 'bebidas',
-        descripcion: 'Té helado de la casa en presentación de 1 litro para compartir.',
+        descripcion: 'Té helado de la casa en presentación de 1 litro.',
         precio: 1.75,
         imagen: '/assets/drink.png',
         etiqueta: 'Familiar'
@@ -298,19 +344,19 @@ const CATALOGO_MENU = [
         id: 'dorayaki',
         nombre: 'Dorayaki',
         categoria: 'postres',
-        descripcion: 'Relleno de nutella, mermelada o dulce de leche. ¡El postre favorito de Doraemon!',
+        descripcion: 'Relleno de nutella, mermelada o dulce de leche.',
         precio: 1.50,
-        imagen: '/assets/drink.png',
-        etiqueta: 'Postre Japonés'
+        imagen: '/assets/dorayaki.png',
+        etiqueta: 'Postre'
     },
     {
         id: 'taiyaki',
         nombre: 'Taiyaki',
         categoria: 'postres',
-        descripcion: 'Relleno de nutella, mermelada o dulce de leche. En forma de pez tradicional japonés.',
+        descripcion: 'Relleno de nutella, mermelada o dulce de leche.',
         precio: 1.50,
-        imagen: '/assets/drink.png',
-        etiqueta: 'Postre Japonés'
+        imagen: '/assets/taiyaki.png',
+        etiqueta: 'Postre'
     },
     {
         id: 'capy-crepp',
@@ -320,146 +366,7 @@ const CATALOGO_MENU = [
         precio: 2.50,
         imagen: '/assets/drink.png',
         etiqueta: 'Recomendado'
-    },
-
-    // =====================================================================
-    // COMBINACIONES (COMBOS)
-    // =====================================================================
-    {
-        id: 'combo-capi-roll',
-        nombre: 'Combo Capi Roll',
-        categoria: 'combos',
-        descripcion: '2 rollos de sushi (20 bocados) a elección.',
-        precio: 11.00,
-        imagen: '/assets/sushi_bento_white.jpg',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'capi-ramen-feast',
-        nombre: 'Capi Ramen Feast',
-        categoria: 'combos',
-        descripcion: '1 ramen + 1 rollo (10 bocados) a elección.',
-        precio: 8.50,
-        imagen: '/assets/sushi2.png',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'fusion-box',
-        nombre: 'Fusion Box',
-        categoria: 'combos',
-        descripcion: '1 ramen + 1 rollo (10 bocados) a elección + 1 orden de gyozas (5 unidades).',
-        precio: 12.00,
-        imagen: '/assets/bento_blue_combo.jpg',
-        etiqueta: 'Combo Premium'
-    },
-    {
-        id: 'capi-wings',
-        nombre: 'Capi Wings',
-        categoria: 'combos',
-        descripcion: '1 japan burguer a elección + 1 orden de alitas (5 alitas) + 1 gaseosa personal.',
-        precio: 7.00,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'capi-box',
-        nombre: 'Capi Box',
-        categoria: 'combos',
-        descripcion: '1 japan burguer a elección + 2 corn dogs + 1 gaseosa personal.',
-        precio: 6.00,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'capi-ramen-deluxe',
-        nombre: 'Capi Ramen Deluxe',
-        categoria: 'combos',
-        descripcion: '1 ramen a elección + 1 corn dog mixto + 1 orden de gyozas (5 unidades).',
-        precio: 7.00,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'capi-mega',
-        nombre: 'Capi Mega',
-        categoria: 'combos',
-        descripcion: '1 orden de alitas + 1 orden de gyozas + 2 corn dogs + 1 japan burguer + 1 frappé + 2 taiyakis.',
-        precio: 16.00,
-        imagen: '/assets/sushi.png',
-        etiqueta: 'Mega Combo'
-    },
-    {
-        id: 'roll-party',
-        nombre: 'Roll Party',
-        categoria: 'combos',
-        descripcion: '3 rollos a elección (30 bocados). ¡Perfecto para compartir en grupo!',
-        precio: 16.00,
-        imagen: '/assets/sushi2.png',
-        etiqueta: 'Para Compartir'
-    },
-    {
-        id: 'capi-dog',
-        nombre: 'Capi Dog',
-        categoria: 'combos',
-        descripcion: '1 corn dog + 3 dorayakis.',
-        precio: 4.50,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'combi-bara',
-        nombre: 'Combi-Bara',
-        categoria: 'combos',
-        descripcion: '1 orden de gyozas (5 unidades) + 3 dorayakis.',
-        precio: 6.00,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'capi-munch',
-        nombre: 'Capi Munch',
-        categoria: 'combos',
-        descripcion: '1 orden de gyozas (5 unidades) + 1 corn dog.',
-        precio: 5.00,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'deli-bara',
-        nombre: 'Deli-Bara',
-        categoria: 'combos',
-        descripcion: '1 japan-burguer + 1 frappé (incluye porción de papas).',
-        precio: 5.00,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'capi-fest',
-        nombre: 'Capi Fest',
-        categoria: 'combos',
-        descripcion: '1 japan-burguer + 1 orden de alitas (5 alitas) + 1 frappé (incluye porción de papas).',
-        precio: 8.50,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Combo Premium'
-    },
-    {
-        id: 'pochi-set',
-        nombre: 'Pochi Set',
-        categoria: 'combos',
-        descripcion: '1 rollo (10 bocados) a elección + 3 gyozas.',
-        precio: 8.50,
-        imagen: '/assets/sushi3.png',
-        etiqueta: 'Combo'
-    },
-    {
-        id: 'capi-snack',
-        nombre: 'Capi Snack',
-        categoria: 'combos',
-        descripcion: '1 orden de alitas (5 alitas) + 2 corn dogs (incluye porción de papas).',
-        precio: 6.50,
-        imagen: '/assets/bento.png',
-        etiqueta: 'Combo'
-    },
+    }
 ];
 
 // =========================================================================
