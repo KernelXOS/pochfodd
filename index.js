@@ -113,7 +113,7 @@ const CATALOGO_MENU = [
         categoria: 'rolls',
         descripcion: 'Rollo tempurizado estilo uramaki relleno con kanikama tempura, aguacate y salmón tempura, acompañado de nuestra salsa.',
         precio: 7.00,
-        imagen: '/assets/sushi2.png',
+        imagen: '/assets/sushi_blue_tempura.jpg',
         etiqueta: 'Exclusivo'
     },
     {
@@ -131,7 +131,7 @@ const CATALOGO_MENU = [
         categoria: 'rolls',
         descripcion: 'Rollo estilo uramaki con atún rojo, queso crema y aguacate. Adornado con topping de tobiko, tempura flakes y spicy mayo.',
         precio: 7.50,
-        imagen: '/assets/sushi.png',
+        imagen: '/assets/sushi_especial.jpg',
         etiqueta: 'Premium'
     },
 
@@ -331,7 +331,7 @@ const CATALOGO_MENU = [
         categoria: 'combos',
         descripcion: '2 rollos de sushi (20 bocados) a elección.',
         precio: 11.00,
-        imagen: '/assets/sushi.png',
+        imagen: '/assets/sushi_bento_white.jpg',
         etiqueta: 'Combo'
     },
     {
@@ -349,7 +349,7 @@ const CATALOGO_MENU = [
         categoria: 'combos',
         descripcion: '1 ramen + 1 rollo (10 bocados) a elección + 1 orden de gyozas (5 unidades).',
         precio: 12.00,
-        imagen: '/assets/sushi3.png',
+        imagen: '/assets/bento_blue_combo.jpg',
         etiqueta: 'Combo Premium'
     },
     {
