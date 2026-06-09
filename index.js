@@ -724,6 +724,7 @@ function cerrarPanelCarrito() {
 // =========================================================================
 
 function actualizarConstructor() {
+    if (!precioConstructor) return;
     let precioAcumulado = 0;
     let baseSeleccionada = '';
     let proteinaSeleccionada = '';
@@ -944,12 +945,16 @@ function configurarOyentesEventos() {
     });
 
     // Constructor de Bowls (cambio de inputs)
-    inputsConstructor.forEach(input => {
-        input.addEventListener('change', actualizarConstructor);
-    });
+    if (inputsConstructor) {
+        inputsConstructor.forEach(input => {
+            input.addEventListener('change', actualizarConstructor);
+        });
+    }
 
     // Añadir desde constructor
-    botonAgregarConstructor.addEventListener('click', agregarCustomBowlAlCarrito);
+    if (botonAgregarConstructor) {
+        botonAgregarConstructor.addEventListener('click', agregarCustomBowlAlCarrito);
+    }
 
     // Confirmación de checkout → WhatsApp
     botonConfirmarPedido.addEventListener('click', iniciarPedidoDomicilio);
