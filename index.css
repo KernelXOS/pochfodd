@@ -766,52 +766,111 @@ body {
 
 /* Responsividad del Hero Premium */
 @media (max-width: 991px) {
-    .slide-grid-premium {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 30px;
-        padding-top: 100px;
-        padding-bottom: 20px;
-        text-align: center;
+    .hero-slider-container {
+        height: 100vh;
+        min-height: 720px;
     }
+    
+    .slide-grid-premium {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding-top: 90px;
+        padding-bottom: 60px;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+    
     .slide-content-premium {
         align-items: center;
+        width: 100%;
     }
+    
     .slide-title-premium {
-        font-size: 2.3rem;
+        font-size: 1.85rem !important;
+        line-height: 1.25;
+        margin-bottom: 12px;
+        letter-spacing: -0.5px;
     }
+    
     .slide-description-premium {
-        margin: 0 auto 24px;
-        font-size: 0.88rem;
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin: 0 auto 20px;
+        max-width: 90%;
+        color: rgba(255, 255, 255, 0.8);
     }
+    
     .slide-buttons-premium {
         justify-content: center;
+        gap: 12px;
+        width: 100%;
     }
-    .play-btn-float {
-        margin-left: 0;
-        margin-top: -10px;
-        margin-bottom: -10px;
-        grid-row: 2;
+    
+    .slide-buttons-premium .btn {
+        padding: 10px 20px !important;
+        font-size: 0.8rem !important;
     }
+    
     .slide-visual-premium {
-        grid-row: 3;
-    }
-    .food-card-wrapper {
-        width: 260px;
-        height: 340px;
-    }
-    .circle-glow-behind {
-        width: 320px;
-        height: 320px;
-    }
-    .hero-slider-container {
+        width: 100%;
         height: auto;
-        padding-bottom: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-row: auto;
     }
+    
+    .food-card-wrapper {
+        width: 220px;
+        height: 290px;
+        border-radius: 20px;
+    }
+    
+    .circle-glow-behind {
+        width: 280px;
+        height: 280px;
+    }
+    
     .slider-dots-premium {
-        bottom: 24px;
+        bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-slider-container {
+        height: 100vh;
+        min-height: 650px;
+    }
+    
+    .slide-grid-premium {
+        gap: 20px;
+        padding-top: 80px;
+    }
+    
+    .slide-title-premium {
+        font-size: 1.6rem !important;
+    }
+    
+    .food-card-wrapper {
+        width: 180px;
+        height: 240px;
+    }
+    
+    .circle-glow-behind {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .slide-badge-premium {
+        margin-bottom: 12px;
+        padding: 4px 12px;
+        font-size: 0.65rem;
     }
 }
 
