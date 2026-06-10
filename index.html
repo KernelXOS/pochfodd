@@ -38,14 +38,14 @@
             
             <nav class="nav-links">
                 <a href="#hero" class="nav-link active">Inicio</a>
-                <a href="#menu" class="nav-link">Menú</a>
+                <a href="#menu" class="nav-link">Platos</a>
                 <a href="#locales" class="nav-link">Locales</a>
-                <a href="#about" class="nav-link">Nosotros</a>
+                <a href="#about" class="nav-link">Contacto</a>
             </nav>
             
             <div class="nav-actions">
-                <button class="cart-btn btn-pedidos" id="cartToggle" aria-label="Pedidos Online">
-                    <i class="fa-solid fa-cart-shopping"></i> <span class="btn-text">PEDIDOS ONLINE</span>
+                <button class="cart-btn-premium" id="cartToggle" aria-label="Carrito de Pedidos">
+                    <i class="fa-solid fa-bag-shopping"></i>
                     <span class="cart-badge" id="cartCount">0</span>
                 </button>
                 <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Abrir Menú">
@@ -59,86 +59,126 @@
         <!-- Sección Principal (Hero Slider) -->
         <section id="hero" class="hero-section tab-section active-tab">
             <div class="hero-slider-container">
-                <!-- Slide 1: Sabores (Fondo Blanco con Ramen y Sushi Real) -->
-                <div class="hero-slide active" data-index="0" style="--slide-bg: #141416;">
+                <!-- Slide 1: Sabores (Fondo Cocina Oscura y Sushi/Ramen) -->
+                <div class="hero-slide active" data-index="0">
                     <div class="slide-texture"></div>
-                    <div class="container slide-grid">
-                        <div class="slide-content">
-                            <span class="slide-badge">¡La mejor Dark Kitchen de Ambato!</span>
-                            <h1 class="slide-title">EN <span class="brand-text">POCH FOOD</span> SIEMPRE HAY NUEVOS SABORES</h1>
-                            <div class="slide-highlight-box">
-                                ¡VERDADERA COMIDA ASIÁTICA!
-                            </div>
-                            <div class="slide-buttons">
-                                <a href="#menu" class="btn btn-primary">Ver el Menú</a>
-                                <a href="#about" class="btn btn-secondary">Nosotros</a>
+                    <div class="container slide-grid-premium">
+                        <div class="slide-content-premium">
+                            <span class="slide-badge-premium">EN POCH FOOD SIEMPRE AUTÉNTICO</span>
+                            <h1 class="slide-title-premium">
+                                EN <span class="text-white">POCH FOOD</span><br>
+                                SIEMPRE HAY<br>
+                                <span class="brand-text-yellow-gradient">NUEVOS SABORES</span>
+                            </h1>
+                            <p class="slide-description-premium">
+                                Disfruta de la mejor comida asiática en Ambato. Recetas ancestrales y fusiones modernas elaboradas con ingredientes frescos y premium.
+                            </p>
+                            <div class="slide-buttons-premium">
+                                <a href="#menu" class="btn btn-menu-premium">VER EL MENÚ</a>
+                                <a href="#about" class="btn btn-contact-premium">NOSOTROS</a>
                             </div>
                         </div>
-                        <div class="slide-visual">
-                            <img src="/assets/sushi_ramen_real.jpg" alt="Ramen y Sushi Poch Food" class="slide-img main-banner-img floating-element" style="border-radius: 15px; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 15px 35px rgba(0,0,0,0.6); max-height: 400px; width: auto; object-fit: cover;">
+                        <div class="slide-visual-premium">
+                            <div class="circle-glow-behind"></div>
+                            <div class="food-card-wrapper">
+                                <img src="/assets/sushi_ramen_real.jpg" alt="Ramen y Sushi Poch Food" class="food-card-img">
+                            </div>
+                            <div class="sparkle-decorator">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 2: Sushi Rolls Clásicos y Premium -->
-                <div class="hero-slide" data-index="1" style="--slide-bg: #e67e22;">
+                <div class="hero-slide" data-index="1">
                     <div class="slide-texture"></div>
-                    <div class="container slide-grid">
-                        <div class="slide-content">
-                            <span class="slide-badge">Sushi Clásico y Premium</span>
-                            <h1 class="slide-title">AUTÉNTICOS <span class="brand-text">SUSHI ROLLS</span></h1>
-                            <div class="slide-highlight-box">
-                                ¡LOS ROLLS MÁS DELICIOSOS DE AMBATO!
-                            </div>
-                            <div class="slide-buttons">
-                                <a href="#menu" class="btn btn-primary">Ver Menú de Sushi</a>
-                                <a href="#locales" class="btn btn-secondary">Visitar Local</a>
+                    <div class="container slide-grid-premium">
+                        <div class="slide-content-premium">
+                            <span class="slide-badge-premium">SUSHI CLÁSICO Y PREMIUM</span>
+                            <h1 class="slide-title-premium">
+                                AUTÉNTICOS<br>
+                                <span class="text-white">SUSHI ROLLS</span><br>
+                                <span class="brand-text-yellow-gradient">DE LA CASA</span>
+                            </h1>
+                            <p class="slide-description-premium">
+                                Prueba nuestros rolls tradicionales y de especialidad, desde tempuras crujientes hasta opciones acevichadas y frutales excepcionales.
+                            </p>
+                            <div class="slide-buttons-premium">
+                                <a href="#menu" class="btn btn-menu-premium">VER SUSHI</a>
+                                <a href="#locales" class="btn btn-contact-premium">VISITAR LOCAL</a>
                             </div>
                         </div>
-                        <div class="slide-visual">
-                            <img src="/assets/sushi_blue_tempura.jpg" alt="Sushi Tempura de Poch Food" class="slide-img floating-element" style="border-radius: 15px; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 15px 35px rgba(0,0,0,0.6); max-height: 400px; width: auto; object-fit: cover;">
+                        <div class="slide-visual-premium">
+                            <div class="circle-glow-behind"></div>
+                            <div class="food-card-wrapper">
+                                <img src="/assets/sushi_blue_tempura.jpg" alt="Sushi Tempura Poch Food" class="food-card-img">
+                            </div>
+                            <div class="sparkle-decorator">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Slide 3: Local Físico (Fondo Rosado/Rojo Pastel con Foto de Clientes y Mural) -->
-                <div class="hero-slide" data-index="2" style="--slide-bg: #c0392b;">
+                <!-- Slide 3: Local Físico -->
+                <div class="hero-slide" data-index="2">
                     <div class="slide-texture"></div>
-                    <div class="container slide-grid">
-                        <div class="slide-content">
-                            <span class="slide-badge">¡Visita Nuestro Local!</span>
-                            <h1 class="slide-title">VIVE LA <span class="brand-text">EXPERIENCIA</span> POCH</h1>
-                            <div class="slide-highlight-box">
-                                ¡EL MEJOR AMBIENTE ASIÁTICO EN AMBATO!
-                            </div>
-                            <div class="slide-buttons">
-                                <a href="#locales" class="btn btn-primary">Reservar Mesa</a>
-                                <a href="#about" class="btn btn-secondary">Sobre Nosotros</a>
+                    <div class="container slide-grid-premium">
+                        <div class="slide-content-premium">
+                            <span class="slide-badge-premium">VISITA NUESTRO LOCAL</span>
+                            <h1 class="slide-title-premium">
+                                VIVE LA<br>
+                                <span class="text-white">EXPERIENCIA</span><br>
+                                <span class="brand-text-yellow-gradient">POCH COMPLETA</span>
+                            </h1>
+                            <p class="slide-description-premium">
+                                Ven a disfrutar del mejor ambiente asiático de Ambato en nuestro local. Música, decoración temática y el mejor servicio te esperan.
+                            </p>
+                            <div class="slide-buttons-premium">
+                                <a href="#locales" class="btn btn-menu-premium">RESERVAR MESA</a>
+                                <a href="#about" class="btn btn-contact-premium">SOBRE NOSOTROS</a>
                             </div>
                         </div>
-                        <div class="slide-visual">
-                            <img src="/assets/local_girls.jpg" alt="Clientes en local físico de Poch Food" class="slide-img floating-element" style="border-radius: 15px; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 15px 35px rgba(0,0,0,0.6); max-height: 400px; width: auto; object-fit: cover;">
+                        <div class="slide-visual-premium">
+                            <div class="circle-glow-behind"></div>
+                            <div class="food-card-wrapper">
+                                <img src="/assets/local_girls.jpg" alt="Clientes en Poch Food" class="food-card-img">
+                            </div>
+                            <div class="sparkle-decorator">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Slide 4: Día del Niño (Fondo Púrpura Pastel con Foto de Niña y Sushi) -->
-                <div class="hero-slide" data-index="3" style="--slide-bg: #1c182a;">
+                <!-- Slide 4: Día del Niño / Eventos -->
+                <div class="hero-slide" data-index="3">
                     <div class="slide-texture"></div>
-                    <div class="container slide-grid">
-                        <div class="slide-content">
-                            <span class="slide-badge">¡Celebración Especial!</span>
-                            <h1 class="slide-title">DÍA DEL <span class="brand-text">NIÑO</span></h1>
-                            <div class="slide-highlight-box">
-                                ¡TAIYAKI CON HELADO GRATIS A TODOS LOS NIÑOS EN EL LOCAL!
-                            </div>
-                            <div class="slide-buttons">
-                                <a href="#menu" class="btn btn-primary">Ver Postres</a>
-                                <a href="#locales" class="btn btn-secondary">Reservar Mesa</a>
+                    <div class="container slide-grid-premium">
+                        <div class="slide-content-premium">
+                            <span class="slide-badge-premium">CELEBRACIONES Y EVENTOS</span>
+                            <h1 class="slide-title-premium">
+                                COMPARTE EN<br>
+                                <span class="text-white">FAMILIA Y CON</span><br>
+                                <span class="brand-text-yellow-gradient">AMIGOS</span>
+                            </h1>
+                            <p class="slide-description-premium">
+                                Te ofrecemos promociones exclusivas, eventos festivos y platos ideales para compartir grandes momentos con tus personas favoritas.
+                            </p>
+                            <div class="slide-buttons-premium">
+                                <a href="#menu" class="btn btn-menu-premium">VER POSTRES</a>
+                                <a href="#locales" class="btn btn-contact-premium">RESERVAS</a>
                             </div>
                         </div>
-                        <div class="slide-visual">
-                            <img src="/assets/local_child.jpg" alt="Día del Niño en Poch Food" class="slide-img floating-element" style="border-radius: 15px; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 15px 35px rgba(0,0,0,0.6); max-height: 400px; width: auto; object-fit: cover;">
+                        <div class="slide-visual-premium">
+                            <div class="circle-glow-behind"></div>
+                            <div class="food-card-wrapper">
+                                <img src="/assets/local_child.jpg" alt="Día del niño en Poch Food" class="food-card-img">
+                            </div>
+                            <div class="sparkle-decorator">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,7 +187,7 @@
                 <button class="slider-arrow prev-arrow" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="slider-arrow next-arrow" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
 
-                <div class="slider-dots">
+                <div class="slider-dots-premium">
                     <span class="dot active" data-index="0"></span>
                     <span class="dot" data-index="1"></span>
                     <span class="dot" data-index="2"></span>
@@ -425,7 +465,7 @@
     <div class="cart-overlay" id="cartOverlay">
         <div class="cart-sidebar glass-panel">
             <div class="cart-header">
-                <h3><i class="fa-solid fa-basket-shopping"></i> Tu Pedido</h3>
+                <h3><i class="fa-solid fa-bag-shopping"></i> Tu Pedido</h3>
                 <button class="close-cart" id="cartClose" aria-label="Cerrar Carrito">&times;</button>
             </div>
             
@@ -439,7 +479,7 @@
             <div class="cart-footer">
                 <div class="cart-summary-row">
                     <span>Costo de envío:</span>
-                    <span class="text-green">GRATIS</span>
+                    <span class="text-muted" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted) !important;">Depende del lugar</span>
                 </div>
                 <div class="cart-summary-row total-row">
                     <span>Total:</span>

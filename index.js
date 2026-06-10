@@ -407,7 +407,7 @@ const botonCerrarSimulador = document.getElementById('closeOrderModal');
 
 // Elementos del Slider y Reservas
 const heroSlides = document.querySelectorAll('.hero-slide');
-const dots = document.querySelectorAll('.slider-dots .dot');
+const dots = document.querySelectorAll('.slider-dots-premium .dot');
 const prevArrow = document.querySelector('.prev-arrow');
 const nextArrow = document.querySelector('.next-arrow');
 const reservationForm = document.getElementById('reservationForm');
@@ -533,6 +533,16 @@ function activarPestaña(targetId) {
             link.classList.add('active');
         }
     });
+
+    // Sincronizar cabecera (transparente en inicio, sólida en otras pestañas)
+    const cabecera = document.querySelector('.header');
+    if (cabecera) {
+        if (cleanId === 'hero') {
+            cabecera.classList.remove('header-solid');
+        } else {
+            cabecera.classList.add('header-solid');
+        }
+    }
 
     // Cerrar el Drawer móvil si está abierto
     if (mobileDrawer) {
@@ -1059,6 +1069,7 @@ function configurarOyentesEventos() {
             if (catalogLightbox) catalogLightbox.classList.remove('active');
         }
     });
+
 }
 
 // =========================================================================
